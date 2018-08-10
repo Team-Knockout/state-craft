@@ -1,0 +1,57 @@
+{
+    "extends": "eslint:recommended",
+    "plugins": [
+        "html"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "impliedStrict": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "rules": {
+      "eqeqeq": ["error", "always"],
+      "no-console": "off",
+      "indent": ["error", 4, { "SwitchCase": 1 }],
+      "quotes": ["warn", "single"],
+      "no-multi-spaces": ["error",
+        {
+            "ignoreEOLComments": true
+        }
+      ],
+      "new-cap": "error",
+      "no-redeclare": [
+        "error",
+        {
+          "builtinGlobals": true
+        }
+      ],
+      "semi": ["error", "always"],
+      "space-in-parens": ["error"],
+      "space-infix-ops": "error",
+      "object-curly-spacing": ["error", "always"],
+      "comma-spacing": "error",
+      "space-before-function-paren": ["error", "never"],
+      "keyword-spacing": [
+        "error",
+        {
+          "before": true,
+          "after": true,
+          "overrides": {
+            "if": { "after": false },
+            "for": { "after": false },
+            "while": { "after": false },
+            "do": { "after": false },
+            "switch": { "after": false },
+            "case": { "after": false }
+          }
+        }
+      ],
+      "array-bracket-spacing": "error"
+    }
+  }
