@@ -1,3 +1,4 @@
+
 import App from '../apps/game-app.js';
 
 let root = document.getElementById('root');

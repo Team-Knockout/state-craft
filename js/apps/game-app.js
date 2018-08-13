@@ -1,10 +1,16 @@
-import html from '../libs/html.js';
 
+
+
+import html from '../libs/html.js';
+  
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 
 import Question from '../components/question.js';
 import questionApi from '../services/question-api.js';
+
+import NationDisplay from '/js/components/nation-display.js';
+import nationApi from '/js/services/nation-api.js';
 
 let template = function() {
     return html`
@@ -19,6 +25,8 @@ let template = function() {
 export default class App {
     constructor() {
         this.questions = questionApi.getAll();
+        this.nation = nationApi.get();
+        console.log('nations showing', this.nation);
     }
 
     render() {
@@ -39,7 +47,12 @@ export default class App {
         });
         main.appendChild(question.render());
 
+        let nationDisplay = new NationDisplay({
+            nation: this.nation
+        });
+        main.appendChild(nationDisplay.render());
 
         return dom;
     }
 }
+
