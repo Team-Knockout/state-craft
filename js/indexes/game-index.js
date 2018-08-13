@@ -1,8 +1,7 @@
-import GameApp from '/js/apps/game-app.js';
 
-
+import App from '../apps/game-app.js';
 
 let root = document.getElementById('root');
-let app = new GameApp();
+let app = new App();
 let dom = app.render();
 root.appendChild(dom);
