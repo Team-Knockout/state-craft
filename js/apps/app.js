@@ -1,16 +1,16 @@
 import html from '/js/libs/html.js';
 
-import Header from '../header.js';
-import Footer from '../components/footer.js';
+import Header from '/js/layout/header.js';
+import Footer from '/js/layout/footer.js';
 
 import NationCreator from '../components/nation-creator.js';
 import nationApi from '/js/services/nation-api.js';
 
 let template = function() {
     return html`
-
-    <main> Hello World</main>
-        
+    <header></header>
+    <main>Hello World</main>
+    <footer></footer>
    `;
 };
 
@@ -27,9 +27,10 @@ export default class App {
         let main = dom.querySelector('main');
         let footer = new Footer;
 
-        this.header = dom.querySelector('header');
+        let header = dom.querySelector('header');
+        console.log(header);
         let appHeader = new Header({});
-        this.header.appendChild(appHeader.render());
+        header.appendChild(appHeader.render());
 
         console.log('in app.js', this.nation);
 
