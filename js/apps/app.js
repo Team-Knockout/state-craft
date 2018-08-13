@@ -24,7 +24,7 @@ export default class App {
         let dom = template();
         let main = dom.querySelector('main');
 
-        console.log(this.nation);
+        console.log('in app.js', this.nation);
 
         let nationCreator = new NationCreator({
             test: 'i a prop',
