@@ -19,6 +19,13 @@ export default class App {
 
         let dom = template();
         let main = dom.querySelector('main');
+
+
+        let nationCreator = new NationCreator({
+            nationCreator: NationCreator
+        });
+
+        main.appendChild(nationCreator.render());
         return dom;
     }
 }
