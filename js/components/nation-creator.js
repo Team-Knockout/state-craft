@@ -16,7 +16,7 @@ let template = function() {
         National Motto:<br>
         <input type="text" name="nationMotto" value="Not all paradise has been lost"><br>
         
-        <input type="submit" value="startGame">
+        <input type="submit" value="startGame" onclick="window.location='/pages/game.html';">
     </form>
         
    `;
