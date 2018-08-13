@@ -6,10 +6,11 @@ import html from '../libs/html.js';
 let template = function() {
     return html`
     <form>
-        First name:<br>
-        <input type="text" name="firstname"><br>
-        Last name:<br>
-        <input type="text" name="lastname">
+        Leader Name:<br>
+        <input type="text" name="leaderName"><br>
+        Nation Name:<br>
+        <input type="text" name="nationName">
+        <input type="submit" value="startGame">
     </form>
         
    `;
