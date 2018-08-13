@@ -8,30 +8,26 @@ There are good and bad leaders, but which one are you? In National Pride, the fa
 
 #### Part of init form
 
-leaderName
-nationName
-nationMotto
-nationFlag
+* leaderName
+* nationName
+* nationMotto
+* nationFlag
 
 #### Other properties
 
-personalFreedom
-economicFreedom
-politicalFreedom
-approval
-population
-econProduction // this is in terms of GDP
-health // this is biological health
-safety // this includes crime and anything else that affects safety
-environment 
+* personalFreedom
+* economicFreedom
+* politicalFreedom
+* approval
+* population
+* econProduction // this is in terms of GDP
+* health // this is biological health
+* safety // this includes crime and anything else that affects safety
+* environment 
 
 ###
 
-country properties
-questions(and consequences)
-results text(and conditions)
+* country properties
+* questions(and consequences)
+* results text(and conditions)
 
-
-
-
-...
