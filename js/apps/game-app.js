@@ -17,6 +17,10 @@ let template = function() {
     <header></header>
     <main>
         <h2>Answer a question!</h2>
+        <form> 
+
+
+        </form>
     </main>
     <footer></footer>
    `;
@@ -41,12 +45,20 @@ export default class App {
         foot.appendChild(footer.render());
 
         let main = dom.querySelector('main');
+        let form = dom.querySelector('form');
 
         let question = new Question({
-            question: this.questions[0],
-        });
-        main.appendChild(question.render());
+            question: this.questions[this.nation.question],
 
+            questionRemover: (event) => {
+                event.preventDefault();
+                console.log('string');
+                return false;
+            }
+        });
+        form.appendChild(question.render());
+        
+        
         let nationDisplay = new NationDisplay({
             nation: this.nation
         });
