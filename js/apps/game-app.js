@@ -10,12 +10,17 @@ let template = function() {
 export default class GameApp{
     constructor() {
         this.nation = nationApi.get();
+        console.log('nations showing', this.nation);
     }
+   
 
     render() {
         let dom = template();
         let main = dom.querySelector('main');
-        let nationDisplay = new NationDisplay;
+        let nationDisplay = new NationDisplay({
+            nation: this.nation
+        });
+
         main.appendChild(nationDisplay.render());
         return dom;
     }
