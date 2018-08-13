@@ -1,10 +1,10 @@
-import html from '/js/libs/html.js';
+import html from '../libs/html.js';
 
-import Header from '/js/layout/header.js';
-import Footer from '/js/layout/footer.js';
+import Header from '../layout/header.js';
+import Footer from '../layout/footer.js';
 
 import NationCreator from '../components/nation-creator.js';
-import nationApi from '/js/services/nation-api.js';
+import nationApi from '../services/nation-api.js';
 
 let template = function() {
     return html`

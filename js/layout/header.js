@@ -1,4 +1,4 @@
-import html from '/js/libs/html.js';
+import html from '../libs/html.js';
 
 let template = function() {
     return html`
