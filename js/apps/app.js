@@ -1,5 +1,5 @@
-import html from '../libs/html.js';
-import NationCreator from '../components/nation-creator.js';
+import html from '/js/libs/html.js';
+import NationCreator from '/js/components/nation-creator.js';
 
 import nationApi from '/js/services/nation-api.js';
 
@@ -27,7 +27,7 @@ export default class App {
         console.log(this.nation);
 
         let nationCreator = new NationCreator({
-            nationCreator: NationCreator
+            test: 'i a prop',
         });
 
         main.appendChild(nationCreator.render());
