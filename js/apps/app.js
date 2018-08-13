@@ -18,13 +18,13 @@ let template = function() {
 export default class App {
 
     constructor() {
-      
+        this.nation = nationApi.get();
     }
 
 
     render() {
         let dom = template();
-
+        console.log(this.nation);
         return dom;
     }
 }
