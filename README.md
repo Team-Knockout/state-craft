@@ -31,3 +31,7 @@ country properties
 questions(and consequences)
 results text(and conditions)
 
+
+
+
+...
