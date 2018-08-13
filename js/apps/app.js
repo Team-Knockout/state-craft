@@ -1,4 +1,4 @@
-import html from '../libs/html.js';
+import html from '/js/libs/html.js';
 
 import Header from '../header.js';
 import Footer from '../components/footer.js';
@@ -31,10 +31,10 @@ export default class App {
         let appHeader = new Header({});
         this.header.appendChild(appHeader.render());
 
-        console.log(this.nation);
+        console.log('in app.js', this.nation);
 
         let nationCreator = new NationCreator({
-            nationCreator: NationCreator
+            test: 'i a prop',
         });
 
         
