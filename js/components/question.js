@@ -1,4 +1,6 @@
 import html from '../libs/html.js';
+import questionApi from '../services/question-api.js';
+
 
 let template = function() {
     return html`
