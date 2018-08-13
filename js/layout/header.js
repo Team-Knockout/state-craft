@@ -6,8 +6,8 @@ let template = function() {
     <section></section>
     <nav>
     <ul>
-        <li><a href="game.html">Play Game</li>
-        <li><a href="results.html">Results</li>
+        <li><a href="/pages/game.html">Play Game</li>
+        <li><a href="/pages/results.html">Results</li>
     </ul>
     </nav>
    `;
