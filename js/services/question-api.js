@@ -1,14 +1,21 @@
+
+// How to access
+// questions[i]['text']
+// questions[i]['options'][j].answer
+// questions[i]['options'][j].effects(this.nation)
+
+
 let questions = [
     {
-        text: 'im a question',
-        option:[{
-            text: 'do this',
+        text: 'Should we ban unicorns?',
+        options:[{
+            answer: 'No!',
             effects: (nation) => {
                 nation.personalFreedom += 1;
             }
         },
         {
-            text: 'do that',
+            answer: 'Yes!',
             effects: (nation) => {
                 nation.personalFreedom -= 1;
             }
@@ -16,8 +23,8 @@ let questions = [
     },
     {
         text: 'im another question',
-        option:[{
-            text: 'do this',
+        options:[{
+            answer: 'do this',
             effects: (nation) => {
                 nation.economicFreedom += 1;
             }
