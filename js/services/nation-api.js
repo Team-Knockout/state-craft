@@ -10,6 +10,7 @@ if(!nation) {
 function createNation() {
 
     let data = {
+        question: 0,
         leaderName: '',
         nationName: '',
         nationMotto: '',
