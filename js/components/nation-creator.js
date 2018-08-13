@@ -3,7 +3,7 @@
 
 import html from '../libs/html.js';
 
-import nationApi from '/js/services/nation-api.js';
+import nationApi from '../services/nation-api.js';
 
 
 let template = function() {
