@@ -25,12 +25,11 @@ export default class App {
 
         let dom = template();
         let main = dom.querySelector('main');
-        let footer = new Footer;
 
-        let header = dom.querySelector('header');
-        console.log(header);
-        let appHeader = new Header({});
-        header.appendChild(appHeader.render());
+        let head = dom.querySelector('header');
+        let foot = dom.querySelector('footer');
+        let header = new Header({});
+        let footer = new Footer;
 
         console.log('in app.js', this.nation);
 
@@ -38,9 +37,10 @@ export default class App {
             test: 'i a prop',
         });
 
-        
+        head.appendChild(header.render());
+        foot.appendChild(footer.render());
+
         main.appendChild(nationCreator.render());
-        main.appendChild(footer.render());
         return dom;
     }
 }
