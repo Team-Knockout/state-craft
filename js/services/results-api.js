@@ -77,5 +77,5 @@ let results = [
 ];
 
 export default {
-    get: () => results
+    get: () => results,
 };

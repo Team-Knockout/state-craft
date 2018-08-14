@@ -3,6 +3,8 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
+import resultsApi from '/js/services/results-api.js';
+
 
 
 
@@ -20,7 +22,7 @@ let template = function() {
 
 export default class App{
     constructor() {
-        this.text = 'hi';
+        this.text = resultsApi.get()[0]['text'][0];
     }
 
     render() {
@@ -34,10 +36,10 @@ export default class App{
         foot.appendChild(footer.render());
 
         let resultSection = dom.querySelector('.results');
-        let results = new Result ({
+        let result = new Result ({
             text: this.text,
         });
-        resultSection.appendChild(results.render());
+        resultSection.appendChild(result.render());
         
 
         return dom;
