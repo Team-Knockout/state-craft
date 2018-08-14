@@ -20,9 +20,12 @@ There are good and bad leaders, but which one are you? In National Pride, the fa
 * politicalFreedom
 * approval
 * population
-* econProduction // this is in terms of GDP
-* health // this is biological health
-* safety // this includes crime and anything else that affects safety
+* econProduction 
+  * this is in terms of GDP
+* health 
+  * this is biological health
+* safety 
+  * this includes crime and anything else that affects safety
 * environment 
 
 ###
