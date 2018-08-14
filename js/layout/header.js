@@ -4,12 +4,22 @@ let template = function() {
     return html`
     <h1>This is a header</h1>
     <nav>
-        <ul>
-            <li><a href="/index.html">Home</li>
-            <li><a href="/pages/survey.html">Play Game</li>
-            <li><a href="/pages/results.html">Results</li>
-        </ul>
+        <div class="menu-content">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/survey.html">Play Game</a></li>
+                <li><a href="/pages/results.html">Results</a></li>
+            </ul>
+            <div class="avatar">
+                <ul>
+                    <li>Name</li>
+                    <li>Country</li>
+                    <li>Flag</li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    
    `;
 };
 
