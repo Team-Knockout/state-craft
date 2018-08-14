@@ -43,10 +43,27 @@ export default class App {
         let main = dom.querySelector('main');
 
         let question = new Question({
-            question: this.questions[0],
+            
+            question: this.questions[this.nation.question],
+
+            handleAnswer: () => {
+                
+                console.log('string');
+
+                //nation.question++
+
+                //clear page and load next question
+
+                //if nation.question < 10
+                //remove question
+                //append new question
+                
+                //else
+                //go to results page
+            }
         });
         main.appendChild(question.render());
-
+        
         let nationDisplay = new NationDisplay({
             nation: this.nation
         });
