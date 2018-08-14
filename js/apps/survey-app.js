@@ -44,21 +44,24 @@ export default class App {
         head.appendChild(header.render());
         foot.appendChild(footer.render());
 
+
+        let qvar = this.questions[this.nation.question];
         let questionSection = dom.querySelector('.question');
         let question = new Question({
         
             
-            question: this.questions[this.nation.question],
+            question: qvar,
 
             handleAnswer: () => {
 
                 this.nation.question++;
                 if(this.nation.question < 10){
-                    console.log('questionSection', questionSection); 
-                    for(let i = 0; i < questionSection.length; i++) {
-                        console.log('the new question index is:', this.nation.question);
+                    console.log('questionSection', questionSection.length); 
+                    while(questionSection.lastElementChild) {
                         questionSection.lastElementChild.remove();
                     }
+                    console.log(this.nation.question);
+                    qvar = this.questions[this.nation.question];
                     questionSection.appendChild(question.render());
                 }
                 else {
