@@ -35,7 +35,7 @@ export default class App {
 
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
-        let header = new Header({});
+        let header = new Header;
         let footer = new Footer;
         head.appendChild(header.render());
         foot.appendChild(footer.render());

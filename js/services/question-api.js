@@ -42,5 +42,4 @@ let questions = [
 export default {
     getOne: (i) => questions[i],
     getAll: () => questions,
-
-}   
+};

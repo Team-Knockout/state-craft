@@ -24,23 +24,22 @@ export default class App {
     render() {
 
         let dom = template();
-        let main = dom.querySelector('main');
-
+        
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
-        let header = new Header({});
+        let header = new Header;
         let footer = new Footer;
-
+        head.appendChild(header.render());
+        foot.appendChild(footer.render());
+        
         console.log('in app.js', this.nation);
-
+        
+        let main = dom.querySelector('main');
         let nationCreator = new NationCreator({
             test: 'i a prop',
         });
-
-        head.appendChild(header.render());
-        foot.appendChild(footer.render());
-
         main.appendChild(nationCreator.render());
+
         return dom;
     }
 }
