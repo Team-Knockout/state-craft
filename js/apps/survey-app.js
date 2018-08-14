@@ -18,7 +18,6 @@ let template = function() {
     <main>
         <h2>Answer a question!</h2>
         <section class="question"></section>
-        
         <section class="nation-display"></section>
     </main>
     <footer></footer>
@@ -29,6 +28,7 @@ export default class App {
     constructor() {
         this.questions = questionApi.getAll();
         this.nation = nationApi.get();
+
         console.log('nations showing', this.nation);
     }
 
@@ -44,27 +44,26 @@ export default class App {
         foot.appendChild(footer.render());
 
 
-        let qvar = this.questions[this.nation.question];
         let questionSection = dom.querySelector('.question');
         let question = new Question({
         
-            
-            question: qvar,
+            question: this.questions[this.nation.question],
 
             handleAnswer: () => {
 
                 this.nation.question++;
                 if(this.nation.question < 10){
-                    console.log('questionSection', questionSection.length); 
+
                     while(questionSection.lastElementChild) {
                         questionSection.lastElementChild.remove();
                     }
-                    console.log(this.nation.question);
-                    qvar = this.questions[this.nation.question];
+ 
+                    question.question = this.questions[this.nation.question];
+
                     questionSection.appendChild(question.render());
                 }
                 else {
-                    window.location.replace("/pages/results.html");
+                    window.location.replace('/pages/results.html');
                 }
             }
         });
