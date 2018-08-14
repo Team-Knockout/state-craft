@@ -36,6 +36,126 @@ let questions = [
             }
         }] 
     },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
+    {
+        text: 'im another question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 1;
+            }
+        },
+        {
+            text: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 1;
+            }
+        }]
+    },
 ];
 
 
