@@ -6,7 +6,7 @@ let template = function() {
     <nav>
         <ul>
             <li><a href="/index.html">Home</li>
-            <li><a href="/pages/game.html">Play Game</li>
+            <li><a href="/pages/survey.html">Play Game</li>
             <li><a href="/pages/results.html">Results</li>
         </ul>
     </nav>
