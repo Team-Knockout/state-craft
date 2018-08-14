@@ -2,6 +2,7 @@ import html from '../libs/html.js';
 
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
+import Result from '../components/result.js';
 
 
 
@@ -10,6 +11,7 @@ let template = function() {
     <header></header>
         <main>
             <h2>Here are your results</h2>
+            <section class="results"></section>
         </main>
     <footer></footer>
         
@@ -30,6 +32,11 @@ export default class App{
         let footer = new Footer;
         head.appendChild(header.render());
         foot.appendChild(footer.render());
+
+        let resultSection = dom.querySelector('.results');
+        let results = new Result;
+        resultSection.appendChild(results.render());
+        
 
         return dom;
     }

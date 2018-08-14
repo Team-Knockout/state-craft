@@ -1,37 +1,35 @@
 
 
+//text array should have 5 elements
+
 let results = [
 
     { 
         label: 'Personal Freedom',
         key: 'personalFreedom',
-        thresholds: [
+        text: [
             'you dont have much personal freedom',
             'you have lots of personal freedom'
-
         ]
     },
-    
     { label: 'Economic Freedom',
         key: 'economicFreedom',
-        thresholds: [
+        text: [
             'you dont have much economic freedom',
             'you have lots of economic freedom'
         ]
     },
-    
     { label: 'Political Freedom',
         key: 'politicalFreedom',
-        thresholds: [
+        text: [
             'you dont have have much political freedom',
             'you have lots of political freedom'
         ]
-    
     },
     {
         label: 'Approval',
         key: 'approval',
-        thresholds: [
+        text: [
             'you dont have have much approval',
             'you have lots of approval'
         ]
@@ -39,7 +37,7 @@ let results = [
     {
         label:'Population',
         key: 'population',
-        thresholds: [
+        text: [
             'you dont have have much population',
             'you have a large population'
         ]
@@ -47,7 +45,7 @@ let results = [
     {
         label:'EconProduction',
         key: 'econProduction',
-        thresholds: [
+        text: [
             'you dont have have much economic production',
             'you have lots of economic production'
         ]
@@ -55,7 +53,7 @@ let results = [
     {
         label:'Health',
         key:'health',
-        thresholds: [
+        text: [
             'you  dont have have much healthcare',
             'you have lots of healthcare'
         ]
@@ -63,7 +61,7 @@ let results = [
     {
         label:'Safety',
         key: 'safety',
-        thresholds: [
+        text: [
             'you  dont have have much safety',
             'you have lots of safety'
         ]
@@ -71,7 +69,7 @@ let results = [
     {
         label:'Environment',
         key: 'environment',
-        thresholds: [
+        text: [
             'you  dont have have much environmental policies',
             'you have lots of environmental policies'
         ]
