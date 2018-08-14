@@ -23,7 +23,7 @@ function createNation() {
         econProduction: 0,
         health: 0,
         safety: 0, 
-        environment: 0 
+        environment: 0,
     };
 
     return data;
@@ -32,5 +32,5 @@ function createNation() {
 
 export default {
     get: () => nation,
-
+    getProp: (prop) => nation[prop],
 };
