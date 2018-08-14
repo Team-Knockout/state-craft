@@ -8,6 +8,7 @@ let template = function(question) {
         <h3> ${question.text} </h3>
         <div>
         <p> ${question['options'][0].answer}</p>
+        <p> ${question['options'][1].answer}</p>
         </div>
 
 

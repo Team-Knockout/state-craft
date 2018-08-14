@@ -46,16 +46,17 @@ export default class App {
 
         let questionSection = dom.querySelector('.question');
         let question = new Question({
+        
             
             question: this.questions[this.nation.question],
 
             handleAnswer: () => {
-                
-                this.nation.question++;
-                console.log('the new question index is:', this.nation.question);
 
+                this.nation.question++;
                 if(this.nation.question < 10){
+                    console.log('questionSection', questionSection); 
                     for(let i = 0; i < questionSection.length; i++) {
+                        console.log('the new question index is:', this.nation.question);
                         questionSection.lastElementChild.remove();
                     }
                     questionSection.appendChild(question.render());
