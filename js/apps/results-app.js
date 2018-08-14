@@ -42,27 +42,32 @@ export default class App{
         let valueArray = [];
         let indexArray = [];
 
-        function getResultsKeys() {
+        function getResultsKeys(arrayOut) {
             for(let i = 0; i < resultsApi.get().length; i++) {
                 let x = resultsApi.get()[i]['key'];
-                keyArray.push(x);
+                arrayOut.push(x);
             }
         }
-        function getValueArray() {
-            for(let i = 0; i < keyArray.length; i++){
-                valueArray.push(nationApi.getProp(keyArray[i]));
+        function getValueArray(arrayIn, arrayOut) {
+            for(let i = 0; i < arrayIn.length; i++){
+                arrayOut.push(nationApi.getProp(arrayIn[i]));
             }
         }
-        function valuesToIndexes(array) {
-            for(let i = 0; i < array.length; i++) {
-                let roundedNum = Math.floor(array[i]);
-                indexArray.push(roundedNum);
+        function valuesToIndexes(arrayIn, arrayOut) {
+            for(let i = 0; i < arrayIn.length; i++) {
+                let roundedNum = Math.floor(arrayIn[i]);
+                if(roundedNum < 4){
+                    arrayOut.push(roundedNum);
+                }
+                else {
+                    arrayOut.push(4);
+                }
             }
         }
-        function renderResults(){
+        function renderResults(arrayIn){
             for(let i = 0; i < resultsApi.get().length; i++){
                 let textArray = resultsApi.get()[i]['text'];
-                let correctIndex = indexArray[i];
+                let correctIndex = arrayIn[i];
                 let result = new Result ({
                     text: textArray[correctIndex],
                 });
@@ -70,10 +75,10 @@ export default class App{
             }
         }
 
-        getResultsKeys();
-        getValueArray();
-        valuesToIndexes(valueArray);
-        renderResults();
+        getResultsKeys(keyArray);
+        getValueArray(keyArray, valueArray);
+        valuesToIndexes(valueArray, indexArray);
+        renderResults(indexArray);
 
         return dom;
     }
