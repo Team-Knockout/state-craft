@@ -1,5 +1,16 @@
-<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
+
 p {
     font-family:font-family: 'Work Sans', sans-serif;
     
+}
+
+.question {
+    background-color: rgb(13, 255, 215);
+}
+.answer {
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
 }
