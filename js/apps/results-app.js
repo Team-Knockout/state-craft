@@ -38,10 +38,7 @@ export default class App{
 
         let resultSection = dom.querySelector('.results');
         
-        let keyArray = [];
-        let valueArray = [];
-        let indexArray = [];
-
+        
         function getResultsKeys(arrayOut) {
             for(let i = 0; i < resultsApi.get().length; i++) {
                 let x = resultsApi.get()[i]['key'];
@@ -74,7 +71,10 @@ export default class App{
                 resultSection.appendChild(result.render());
             }
         }
-
+        
+        let keyArray = [];
+        let valueArray = [];
+        let indexArray = [];
         getResultsKeys(keyArray);
         getValueArray(keyArray, valueArray);
         valuesToIndexes(valueArray, indexArray);
