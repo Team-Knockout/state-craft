@@ -2,9 +2,11 @@ import html from '../libs/html.js';
 
 let template = function() {
     return html`
-    <footer>
+    <footer class="footer">
     © Statecraft | 2018
-</footer>
+    </footer>
+    <img class="logo" src="../assets/logo.jpg">
+
    `;
 };
 

@@ -18,6 +18,19 @@
 .avatar {
     width: 300px;
 } 
+.footer {
+    position: fixed;
+    bottom: 0;
+    height:40px;
+    text-align: center;
+    width: 100%;
+}
+.logo{
+    position:absolute;
+    bottom:10px;
+    left: 600px;
+    width:50px;
+}
     
 @media screen and (min-width: 400px) {
     .menu-content {

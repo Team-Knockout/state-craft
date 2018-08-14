@@ -3,7 +3,6 @@ import html from '../libs/html.js';
 let template = function(nation) {
    
     return html`
-    <h1>This is a header</h1>
     <nav>
         <div class="menu-content">
                 <a href="/index.html">Home</a>
