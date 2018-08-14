@@ -1,18 +1,18 @@
 import html from '../libs/html.js';
 
-let template = function() {
+let template = function(text) {
     return html`
-        <p>Result</p>
+        <p>${text}</p>
    `;
 };
 
 export default class Result{
-    constructor() {
-       
+    constructor(props) {
+        this.text = props.text;
     }
 
     render() {
-        let dom = template();
+        let dom = template(this.text);
         return dom;
     }
 }

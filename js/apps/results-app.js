@@ -20,7 +20,7 @@ let template = function() {
 
 export default class App{
     constructor() {
-       
+        this.text = 'hi';
     }
 
     render() {
@@ -34,7 +34,9 @@ export default class App{
         foot.appendChild(footer.render());
 
         let resultSection = dom.querySelector('.results');
-        let results = new Result;
+        let results = new Result ({
+            text: this.text,
+        });
         resultSection.appendChild(results.render());
         
 
