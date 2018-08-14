@@ -4,6 +4,7 @@ import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
 import resultsApi from '/js/services/results-api.js';
+import nationApi from '/js/services/nation-api.js';
 
 
 
@@ -36,10 +37,37 @@ export default class App{
         foot.appendChild(footer.render());
 
         let resultSection = dom.querySelector('.results');
-        let result = new Result ({
-            text: this.text,
-        });
-        resultSection.appendChild(result.render());
+        
+        function rangeToIndex() {
+            Math.floor(value);
+
+        }
+
+        function getResultsKeys() {
+            let keyArray;
+            for(let i = 0; i < resultsApi.get().length; i++) {
+                keyArray += resultsApi.get()[i]['key'];
+            }
+            return keyArray;
+        }
+        
+        for()
+
+        resultsApi.get()
+        
+        nationApi.get
+
+
+        for(let i = 0; i < resultsApi.get().length; i++){
+            let textArray = resultsApi.get()[i]['text'];
+
+            let result = new Result ({
+                text: textArray[correctIndex],
+            });
+            resultSection.appendChild(result.render());
+        }
+
+
         
 
         return dom;
