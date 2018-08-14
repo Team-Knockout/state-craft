@@ -6,7 +6,7 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 
-import QuestionList from '../components/question-list.js';
+import QuestionBox from '../components/question-box.js';
 import questionApi from '../services/question-api.js';
 
 import NationDisplay from '../components/nation-display.js';
@@ -17,7 +17,7 @@ let template = function() {
     <header></header>
     <main>
         <h2>Answer a question!</h2>
-        <section class="question"></section>
+        <section class="question-box"></section>
         <section class="nation-display"></section>
     </main>
     <footer></footer>
@@ -44,8 +44,8 @@ export default class App {
         foot.appendChild(footer.render());
 
 
-        let questionSection = dom.querySelector('.question');
-        let questionList = new QuestionList({
+        let questionSection = dom.querySelector('.question-box');
+        let questionBox = new QuestionBox({
         
             question: this.questions[this.nation.question],
 
@@ -57,14 +57,13 @@ export default class App {
                     while(questionSection.lastElementChild) {
                         questionSection.lastElementChild.remove();
                     }
-                    questionList.question = this.questions[this.nation.question];
-                    questionSection.appendChild(questionList.render());
+                    questionBox.question = this.questions[this.nation.question];
+                    questionSection.appendChild(questionBox.render());
                 }
                 else {
                     window.location.replace('/pages/results.html');
                 }
             }
-
 
         });
 
@@ -75,7 +74,7 @@ export default class App {
             `;
         }     
         if(this.nation.question < 10) {
-            questionSection.appendChild(questionList.render());
+            questionSection.appendChild(questionBox.render());
         }
         else {
             questionSection.appendChild(warning());
