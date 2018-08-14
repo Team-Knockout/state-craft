@@ -38,37 +38,42 @@ export default class App{
 
         let resultSection = dom.querySelector('.results');
         
-        function rangeToIndex() {
-            Math.floor(value);
-
-        }
+        let keyArray = [];
+        let valueArray = [];
+        let indexArray = [];
 
         function getResultsKeys() {
-            let keyArray;
             for(let i = 0; i < resultsApi.get().length; i++) {
-                keyArray += resultsApi.get()[i]['key'];
+                let x = resultsApi.get()[i]['key'];
+                keyArray.push(x);
             }
-            return keyArray;
         }
-        
-        for()
-
-        resultsApi.get()
-        
-        nationApi.get
-
-
-        for(let i = 0; i < resultsApi.get().length; i++){
-            let textArray = resultsApi.get()[i]['text'];
-
-            let result = new Result ({
-                text: textArray[correctIndex],
-            });
-            resultSection.appendChild(result.render());
+        function getValueArray() {
+            for(let i = 0; i < keyArray.length; i++){
+                valueArray.push(nationApi.getProp(keyArray[i]));
+            }
+        }
+        function valuesToIndexes(array) {
+            for(let i = 0; i < array.length; i++) {
+                let roundedNum = Math.floor(array[i]);
+                indexArray.push(roundedNum);
+            }
+        }
+        function renderResults(){
+            for(let i = 0; i < resultsApi.get().length; i++){
+                let textArray = resultsApi.get()[i]['text'];
+                let correctIndex = indexArray[i];
+                let result = new Result ({
+                    text: textArray[correctIndex],
+                });
+                resultSection.appendChild(result.render());
+            }
         }
 
-
-        
+        getResultsKeys();
+        getValueArray();
+        valuesToIndexes(valueArray);
+        renderResults();
 
         return dom;
     }

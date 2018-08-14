@@ -32,5 +32,5 @@ function createNation() {
 
 export default {
     get: () => nation,
-
+    getProp: (prop) => nation[prop],
 };
