@@ -17,10 +17,6 @@ let template = function() {
     <header></header>
     <main>
         <h2>Answer a question!</h2>
-        <form> 
-
-
-        </form>
     </main>
     <footer></footer>
    `;
@@ -45,19 +41,28 @@ export default class App {
         foot.appendChild(footer.render());
 
         let main = dom.querySelector('main');
-        let form = dom.querySelector('form');
 
         let question = new Question({
+            
             question: this.questions[this.nation.question],
 
-            questionRemover: (event) => {
-                event.preventDefault();
+            handleAnswer: () => {
+                
                 console.log('string');
-                return false;
+
+                //nation.question++
+
+                //clear page and load next question
+
+                //if nation.question < 10
+                //remove question
+                //append new question
+                
+                //else
+                //go to results page
             }
         });
-        form.appendChild(question.render());
-        
+        main.appendChild(question.render());
         
         let nationDisplay = new NationDisplay({
             nation: this.nation
