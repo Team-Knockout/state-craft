@@ -39,7 +39,10 @@ export default class App {
 
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
-        let header = new Header;
+        console.log('this.nation:', this.nation);
+        let header = new Header({
+            nation: this.nation  
+        });
         let footer = new Footer;
         head.appendChild(header.render());
         foot.appendChild(footer.render());

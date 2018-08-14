@@ -1,6 +1,9 @@
 import html from '../libs/html.js';
 
-let template = function() {
+let template = function(nation) {
+    if(!nation){
+        nation = 'nation woah';
+    }
     return html`
     <h1>This is a header</h1>
     <nav>
@@ -12,9 +15,9 @@ let template = function() {
             </ul>
             <div class="avatar">
                 <ul>
-                    <li>Name</li>
-                    <li>Country</li>
-                    <li>Flag</li>
+                    <li>Name: ${nation.leaderName}</li>
+                    <li>Country: ${nation.nationName}</li>
+                    <li>Flag:</li>
                 </ul>
             </div>
         </div>
@@ -24,13 +27,16 @@ let template = function() {
 };
 
 export default class Header {       
-    constructor() {
+    constructor(props) {
+        console.log(props);
+        this.nation = props.nation;
+        console.log(' this.nation : ', this.nation);
 
     }
 
 
     render() {
-        let dom = template();
+        let dom = template(this.nation);
         return dom;
     }
 }
