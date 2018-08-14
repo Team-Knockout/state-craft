@@ -57,7 +57,12 @@ export default class QuestionBox{
                 else {
                     window.location.replace('/pages/results.html');
                 }
+            },
+            handleNation: () => {
+                this.questions[this.nation.question]['options'][answer.index].effects(this.nation);
+                console.log(this.nation);
             }
+
 
         });
 
