@@ -11,10 +11,13 @@ function createNation() {
 
     let data = {
         question: 0,
+        answers: [],
+        
         leaderName: '',
         nationName: '',
         nationMotto: '',
         nationFlag: '',
+
         personalFreedom: 0,
         economicFreedom: 0,
         politicalFreedom: 0,
