@@ -22,7 +22,7 @@ export default class Answer {
 
         let answer = dom.querySelector('.answer');
         answer.addEventListener('click', () => {
-            this.handleNation();
+            this.handleNation(this.index);
             this.handleAnswer();
         });
 
