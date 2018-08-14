@@ -66,8 +66,11 @@ export default class QuestionBox{
 
         });
 
-        //for number of answers, run the following appendChild method, and substitute different values for the answer template input
-        answerList.appendChild(answer.render());
+        for(let i = 0; i < this.questions[this.nation.question].options.length; i++) {
+            answer.index = i;
+            answerList.appendChild(answer.render());
+        }
+
             
         return dom;
     }
