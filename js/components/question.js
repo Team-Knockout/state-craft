@@ -4,12 +4,12 @@ import questionApi from '../services/question-api.js';
 
 let template = function(question) {
     return html`
-        <form>
-                <label>${question.text}</label>
-                <input type="radio" name="question" value="${question['options'][0].answer}">
-                <input type="radio" name="question" value="${question['options'][1].answer}">
-                <button type="submit" value="">As you wish, my liege</button>
-        </form>
+
+        <h3> ${question.text} </h3>
+        <div>
+        <p> ${question['options'][0].answer}</p>
+        </div>
+
 
    `;
 };
@@ -24,9 +24,9 @@ export default class Question{
     render() {
         let dom = template(this.question);
 
-        let form = dom.querySelector('form');
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
+
+        this.div = dom.querySelector('div');
+        this.div.addEventListener('click', () => {
             this.handleAnswer();
         });
             
