@@ -24,6 +24,7 @@ let template = function() {
 export default class App{
     constructor() {
         this.text = resultsApi.get()[0]['text'][0];
+        this.nation = nationApi.get();
     }
 
     render() {

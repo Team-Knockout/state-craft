@@ -39,7 +39,6 @@ export default class App {
 
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
-        console.log('this.nation:', this.nation);
         let header = new Header({
             nation: this.nation  
         });

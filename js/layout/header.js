@@ -1,18 +1,14 @@
 import html from '../libs/html.js';
 
 let template = function(nation) {
-    if(!nation){
-        nation = 'nation woah';
-    }
+   
     return html`
     <h1>This is a header</h1>
     <nav>
         <div class="menu-content">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/survey.html">Play Game</a></li>
-                <li><a href="/pages/results.html">Results</a></li>
-            </ul>
+                <a href="/index.html">Home</a>
+                <a href="/pages/survey.html">Play Game</a>
+                <a href="/pages/results.html">Results</a>
             <div class="avatar">
                 <ul>
                     <li>Name: ${nation.leaderName}</li>
