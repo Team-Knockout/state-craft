@@ -9,16 +9,15 @@ import Footer from '../layout/footer.js';
 import Question from '../components/question.js';
 import questionApi from '../services/question-api.js';
 
-import NationDisplay from '/js/components/nation-display.js';
-import nationApi from '/js/services/nation-api.js';
+import NationDisplay from '../components/nation-display.js';
+import nationApi from '../services/nation-api.js';
 
 let template = function() {
     return html`
     <header></header>
     <main>
-        <section class="question">
-            <h2>Answer a question!</h2>
-        </section>
+        <h2>Answer a question!</h2>
+        <section class="question"></section>
         
         <section class="nation-display"></section>
     </main>
