@@ -11,13 +11,13 @@ let questions = [
         options:[{
             answer: 'No!',
             effects: (nation) => {
-                nation.personalFreedom += 1;
+                nation.personalFreedom += 0.05;
             }
         },
         {
             answer: 'Yes!',
             effects: (nation) => {
-                nation.personalFreedom -= 1;
+                nation.personalFreedom -= 0.05;
             }
         }] 
     },
@@ -26,133 +26,133 @@ let questions = [
         options:[{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }] 
     },
     {
-        text: 'im another question',
+        text: 'im a third question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im a fourth question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im a fifth question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im sixth question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im seventh question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im eigth question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im ninth question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },
     {
-        text: 'im another question',
+        text: 'im tenth question',
         options: [{
             answer: 'do this',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
             text: 'do that',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }]
     },

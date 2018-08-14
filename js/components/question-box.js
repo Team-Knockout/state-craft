@@ -31,42 +31,45 @@ export default class QuestionBox{
         questionText.appendChild(newQuestion.render());
 
         let answerList = dom.querySelector('.answer-list');
-        let answer = new Answer({
-            
-            question: this.questions[this.nation.question],
-            index: 0,
-            handleAnswer: () => {
-
-                this.nation.question++;
-                if(this.nation.question < 10) {
-
-                    while(questionText.lastElementChild) {
-                        questionText.lastElementChild.remove();
-                    }
-                    while(answerList.lastElementChild) {
-                        answerList.lastElementChild.remove();
-                    }
-
-                    answer.question = this.questions[this.nation.question];
-                    
-                    newQuestion.question = this.questions[this.nation.question];
-
-                    questionText.appendChild(newQuestion.render());
-                    answerList.appendChild(answer.render());
-                }
-                else {
-                    window.location.replace('/pages/results.html');
-                }
-            },
-            handleNation: (index) => {
-                this.questions[this.nation.question]['options'][index].effects(this.nation);
-                console.log('handleNation', this.nation);
-            }
-
-        });
-
+        
         for(let i = 0; i < this.questions[this.nation.question].options.length; i++) {
-            answer.index = i;
+            
+            let answer = new Answer({
+    
+                question: this.questions[this.nation.question],
+                index: i,
+                handleAnswer: () => {
+    
+                    this.nation.question++;
+                    if(this.nation.question < 10) {
+    
+                        while(questionText.lastElementChild) {
+                            questionText.lastElementChild.remove();
+                        }
+                        while(answerList.lastElementChild) {
+                            answerList.lastElementChild.remove();
+                        }
+    
+                        answer.question = this.questions[this.nation.question];
+                        
+                        newQuestion.question = this.questions[this.nation.question];
+    
+                        questionText.appendChild(newQuestion.render());
+                        answerList.appendChild(answer.render());
+                    }
+                    else {
+                        window.location.replace('/pages/results.html');
+                    }
+                },
+                handleNation: (selectedIndex) => {
+                    console.log(selectedIndex);
+                    this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
+    
+                    console.log('in handleNation', 'index', this.index, 'nation', this.nation);
+                },
+            });
+
+            
             answerList.appendChild(answer.render());
         }
 
