@@ -43,7 +43,3 @@ export default {
     getOne: (i) => questions[i],
     getAll: () => questions,
 };
-
-//removeQuestionOnSelect: function(question) {
-//let currentQuestion = 
-//}
