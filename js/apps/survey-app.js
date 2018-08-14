@@ -7,7 +7,7 @@ import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 
 import QuestionBox from '../components/question-box.js';
-import questionApi from '../services/question-api.js';
+// import questionApi from '../services/question-api.js';
 
 import NationDisplay from '../components/nation-display.js';
 import nationApi from '../services/nation-api.js';
@@ -17,7 +17,7 @@ let template = function() {
     <header></header>
     <main>
         <h2>Answer a question!</h2>
-        <section class="question-box"></section>
+        <section class="question-area"></section>
         <section class="nation-display"></section>
     </main>
     <footer></footer>
@@ -26,7 +26,7 @@ let template = function() {
 
 export default class App {
     constructor() {
-        this.questions = questionApi.getAll();
+        // this.questions = questionApi.getAll();
         this.nation = nationApi.get();
 
         console.log('nations showing', this.nation);
@@ -44,29 +44,9 @@ export default class App {
         foot.appendChild(footer.render());
 
 
-        let questionSection = dom.querySelector('.question-box');
-        let questionBox = new QuestionBox({
-        
-            question: this.questions[this.nation.question],
-
-            handleAnswer: () => {
-
-                this.nation.question++;
-                if(this.nation.question < 10){
-
-                    while(questionSection.lastElementChild) {
-                        questionSection.lastElementChild.remove();
-                    }
-                    questionBox.question = this.questions[this.nation.question];
-                    questionSection.appendChild(questionBox.render());
-                }
-                else {
-                    window.location.replace('/pages/results.html');
-                }
-            }
-
-        });
-
+        let questionArea = dom.querySelector('.question-area');   
+        let questionBox = new QuestionBox({});
+ 
         function warning(){
             return html`
                 <p>You've already answered all of the questions!</p>
@@ -74,10 +54,10 @@ export default class App {
             `;
         }     
         if(this.nation.question < 10) {
-            questionSection.appendChild(questionBox.render());
+            questionArea.appendChild(questionBox.render());
         }
         else {
-            questionSection.appendChild(warning());
+            questionArea.appendChild(warning());
         }
         
         let nationSection = dom.querySelector('.nation-display');
