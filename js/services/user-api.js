@@ -20,7 +20,7 @@ export default {
             // create a new user object
             let user = {
                 name: username,
-                nation: // create nation with default shit
+                nation: 'placeholder' // create nation with default shit
             };
 
             users[username] = user;

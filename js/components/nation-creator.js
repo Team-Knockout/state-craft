@@ -18,24 +18,25 @@ let template = function() {
         National Motto:<br>
         <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost"><br>
         
+
         <label>
-            <input type="radio" name="nationFlag" value="../assets/flag1.png"/>
-            <img class="flag-image" src="../assets/flag1.png">
+            <input type="radio" name="nationFlag" value="assets/flag1.png"/>
+            <img class="flag-image" src="assets/flag1.png">
         </label>
         <label>
-            <input type="radio" name="nationFlag" value="../assets/flag2.png"/>
-            <img class="flag-image" src="../assets/flag2.png">
+            <input type="radio" name="nationFlag" value="assets/flag2.png"/>
+            <img class="flag-image" src="assets/flag2.png">
         </label>
         <label>
-            <input type="radio" name="nationFlag" value="../assets/flag3.png"/>
-            <img class="flag-image" src="../assets/flag3.png">
+            <input type="radio" name="nationFlag" value="assets/flag3.png"/>
+            <img class="flag-image" src="assets/flag3.png">
         </label>
         <label>
-            <input type="radio" name="nationFlag" value="../assets/flag4.png"/>
-            <img class="flag-image" src="../assets/flag4.png">
+            <input type="radio" name="nationFlag" value="assets/flag4.png"/>
+            <img class="flag-image" src="assets/flag4.png">
         </label>
-    
-        <input class="form-button" type="submit" value="startGame" onclick="window.location='/pages/survey.html';">
+   
+        <input class="form-button" type="submit" value="startGame" onclick="window.location='survey.html';">
     </form>
 </div>
         

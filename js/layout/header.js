@@ -7,9 +7,9 @@ let template = function(nation) {
         <div class="menu-content">
         <p></p>
              <div class="menu-nav">
-                <a href="/index.html">Home</a>
-                <a href="/pages/survey.html">Play Game</a>
-                <a href="/pages/results.html">Results</a>
+                <a href="index.html">Home</a>
+                <a href="survey.html">Play Game</a>
+                <a href="results.html">Results</a>
              </div>
             <div class="avatar">
                 <ul>
