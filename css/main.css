@@ -36,20 +36,29 @@ p {
 .avatar {
     width: 300px;
 } 
-.footer {
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     bottom: 0;
-    height:40px;
-    text-align: center;
+    padding: 10px;
     width: 100%;
 }
 .logo{
-    position:absolute;
-    bottom:10px;
-    left: 600px;
+    height:50px;
+    margin: 10px;
     width:50px;
 }
-    
+.result-box {
+    border: 1px solid #aaaa;
+    cursor: pointer;
+}
+.answer:hover {
+    background-color: lightcoral;
+    opacity: 10;
+    box-shadow: 5px 5px 3px rgb(131, 131, 131);
+}
 @media screen and (min-width: 400px) {
     .menu-content {
     display:flex;
