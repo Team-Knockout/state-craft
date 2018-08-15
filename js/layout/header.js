@@ -12,7 +12,7 @@ let template = function(nation) {
                 <ul>
                     <li>Name: ${nation.leaderName}</li>
                     <li>Country: ${nation.nationName}</li>
-                    <li>Flag: <img src="${nation.nationFlag}"></li>
+                    <li >Flag: <img class="flag-image" src="${nation.nationFlag}"></li>
                 </ul>
             </div>
         </div>
