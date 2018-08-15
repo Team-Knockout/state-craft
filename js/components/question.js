@@ -3,7 +3,8 @@ import html from '../libs/html.js';
 
 let template = function(question) {
     return html`
-        <h3>${question.text}</h3>
+        <h3>${question.title}</h3>
+        <h4>${question.text}</h4>
     `;
 };
 
