@@ -33,6 +33,8 @@ export default class QuestionBox{
         questionText.appendChild(newQuestion.render());
 
         
+
+        //  this.questions[this.nation.question] selects a question in the question api
         for(let i = 0; i < this.questions[this.nation.question].options.length; i++) {
             
             let answer = new Answer({
@@ -40,23 +42,30 @@ export default class QuestionBox{
                 question: this.questions[this.nation.question],
                 index: i,
                 handleAnswer: (selectedIndex) => {
-                    
+
+
+                    //increment the nation object
                     this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
                     this.nation.question++;
 
+                    //helper function
                     function clearElements(element) {
                         while(element.lastElementChild) {
                             element.lastElementChild.remove();
                         }    
                     }
+
                     if(this.nation.question < 10) {
 
+                        // clearing elements
                         clearElements(questionText);
                         clearElements(answerList);
- 
-                        answer.question = this.questions[this.nation.question];                       
+                        
+                        // setting non-existent objects' properties to new values
                         newQuestion.question = this.questions[this.nation.question];
+                        answer.question = this.questions[this.nation.question];
     
+                        //appending the dom with the non-existent objects' new values
                         questionText.appendChild(newQuestion.render());
                         answerList.appendChild(answer.render());
                     }
