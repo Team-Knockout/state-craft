@@ -33,13 +33,19 @@ let questions = [
         title: 'Where\'s The Love Gone?',
         text: 'Last night the respected tabloid TV show "60 Minutes" ran a report on @@NAME@@\'s rising divorce rate. What is happening to the nuclear family?',
         options:[{
-            answer: 'yes',
+            answer: '"There\'s a simple solution," says Pastor Felix, of the Catholic Church. "Divorce should be illegal. \'For better or worse,\' anyone remember how that goes? We should return to the good old days, when you got married for life and stuck by your partner no matter how much of a drunken, abusive, adulterating disappointment they turned out to be."',
             effects: (nation) => {
                 nation.economicFreedom += 0.05;
             }
         },
         {
-            answer: 'of course',
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -59,6 +65,12 @@ let questions = [
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
         }]
     },
     {
@@ -72,6 +84,12 @@ let questions = [
         },
         {
             answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -91,6 +109,12 @@ let questions = [
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
         }]
     },
     {
@@ -104,6 +128,12 @@ let questions = [
         },
         {
             answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -123,6 +153,12 @@ let questions = [
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
         }]
     },
     {
@@ -136,6 +172,12 @@ let questions = [
         },
         {
             answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -155,6 +197,12 @@ let questions = [
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
         }]
     },
     {
@@ -168,6 +216,12 @@ let questions = [
         },
         {
             answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        },
+        {
+            answer: 'John Black, author of the hit book, \'Men are from Mars, Women are from Some Whole Other Place,\' has a simpler solution. "If couples would just call each other \'darling\' once in a while, there would be far fewer relationship breakdowns. A little affection is all it takes. So the government should make it mandatory: call your spouse \'darling\' at least once a day, or face a fine."',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
