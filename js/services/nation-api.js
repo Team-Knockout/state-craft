@@ -1,4 +1,4 @@
-import data from '/js/services/game-storage.js';
+import data from './game-storage.js';
 
 let nation = data.nation;
 

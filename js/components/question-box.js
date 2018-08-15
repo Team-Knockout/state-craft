@@ -25,12 +25,13 @@ export default class QuestionBox{
         let dom = template(this.question);
 
         let questionText = dom.querySelector('.question-text');
+        let answerList = dom.querySelector('.answer-list');
+
         let newQuestion = new Question({
             question: this.questions[this.nation.question],
         });
         questionText.appendChild(newQuestion.render());
 
-        let answerList = dom.querySelector('.answer-list');
         
         for(let i = 0; i < this.questions[this.nation.question].options.length; i++) {
             
@@ -38,20 +39,22 @@ export default class QuestionBox{
     
                 question: this.questions[this.nation.question],
                 index: i,
-                handleAnswer: () => {
-    
+                handleAnswer: (selectedIndex) => {
+                    
+                    this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
                     this.nation.question++;
+
+                    function clearElements(element) {
+                        while(element.lastElementChild) {
+                            element.lastElementChild.remove();
+                        }    
+                    }
                     if(this.nation.question < 10) {
-    
-                        while(questionText.lastElementChild) {
-                            questionText.lastElementChild.remove();
-                        }
-                        while(answerList.lastElementChild) {
-                            answerList.lastElementChild.remove();
-                        }
-    
-                        answer.question = this.questions[this.nation.question];
-                        
+
+                        clearElements(questionText);
+                        clearElements(answerList);
+ 
+                        answer.question = this.questions[this.nation.question];                       
                         newQuestion.question = this.questions[this.nation.question];
     
                         questionText.appendChild(newQuestion.render());
@@ -61,15 +64,8 @@ export default class QuestionBox{
                         window.location.replace('/pages/results.html');
                     }
                 },
-                handleNation: (selectedIndex) => {
-                    console.log(selectedIndex);
-                    this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
-    
-                    console.log('in handleNation', 'index', this.index, 'nation', this.nation);
-                },
             });
 
-            
             answerList.appendChild(answer.render());
         }
 

@@ -12,8 +12,6 @@ export default class Answer {
         this.question = props.question;
         this.index = props.index;
         this.handleAnswer = props.handleAnswer;
-        this.handleNation = props.handleNation;
-
     }
 
     render() {
@@ -22,14 +20,8 @@ export default class Answer {
 
         let answer = dom.querySelector('.answer');
         answer.addEventListener('click', () => {
-            // console.log(this.index);
-            this.handleNation(this.index);
-            this.handleAnswer();
+            this.handleAnswer(this.index);
         });
-
-
-
-
 
         return dom;
     }
