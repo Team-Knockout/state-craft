@@ -1,4 +1,4 @@
-import data from '/js/services/game-storage.js';
+import data from './game-storage.js';
 
 let nation = data.nation;
 
@@ -11,19 +11,22 @@ function createNation() {
 
     let data = {
         question: 0,
+        answers: [],
+        
         leaderName: '',
         nationName: '',
         nationMotto: '',
         nationFlag: '',
-        personalFreedom: 0,
-        economicFreedom: 0,
-        politicalFreedom: 0,
-        approval: 0,
-        population: 0,
-        econProduction: 0,
-        health: 0,
-        safety: 0, 
-        environment: 0,
+
+        personalFreedom: 2.5,
+        economicFreedom: 2.5,
+        politicalFreedom: 2.5,
+        approval: 2.5,
+        population: 2.5,
+        econProduction: 2.5,
+        health: 2.5,
+        safety: 2.5, 
+        environment: 2.5,
     };
 
     return data;

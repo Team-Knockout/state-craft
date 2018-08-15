@@ -6,20 +6,18 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 
-import Question from '../components/question.js';
-import questionApi from '../services/question-api.js';
+import QuestionBox from '../components/question-box.js';
+// import questionApi from '../services/question-api.js';
 
-import NationDisplay from '/js/components/nation-display.js';
-import nationApi from '/js/services/nation-api.js';
+import NationDisplay from '../components/nation-display.js';
+import nationApi from '../services/nation-api.js';
 
 let template = function() {
     return html`
     <header></header>
     <main>
-        <section class="question">
-            <h2>Answer a question!</h2>
-        </section>
-        
+        <h2>Answer a question!</h2>
+        <section class="question-area"></section>
         <section class="nation-display"></section>
     </main>
     <footer></footer>
@@ -28,9 +26,8 @@ let template = function() {
 
 export default class App {
     constructor() {
-        this.questions = questionApi.getAll();
+        // this.questions = questionApi.getAll();
         this.nation = nationApi.get();
-        console.log('nations showing', this.nation);
     }
 
     render() {
@@ -46,41 +43,35 @@ export default class App {
         head.appendChild(header.render());
         foot.appendChild(footer.render());
 
-        let questionSection = dom.querySelector('.question');
-        let question = new Question({
-        
-            
-            question: this.questions[this.nation.question],
-
-            handleAnswer: () => {
-
-                this.nation.question++;
-                if(this.nation.question < 10){
-                    console.log('questionSection', questionSection); 
-                    for(let i = 0; i < questionSection.length; i++) {
-                        console.log('the new question index is:', this.nation.question);
-                        questionSection.lastElementChild.remove();
-                    }
-                    questionSection.appendChild(question.render());
+        let questionArea = dom.querySelector('.question-area');   
+        let questionBox = new QuestionBox({
+            reRenderQuestionBox: (nation, location) => {
+                while(questionArea.lastElementChild){
+                    questionArea.lastElementChild.remove();
                 }
-                else {
-                    window.location.replace("/pages/results.html");
-                }
-            }
+                renderQuestionBox(nation, location);
+            },
+            questionArea: questionArea,
         });
+        
 
-        function warning(){
+        function warning() {
             return html`
                 <p>You've already answered all of the questions!</p>
                 <p>Dev note: run resetNation() in the console to be able to play again</p>
             `;
-        }     
-        if(this.nation.question < 10) {
-            questionSection.appendChild(question.render());
         }
-        else {
-            questionSection.appendChild(warning());
+
+        function renderQuestionBox(nation, location) {
+            if(nation.question < 10) {
+                location.appendChild(questionBox.render());
+            }
+            else {
+                location.appendChild(warning());
+            }
         }
+        renderQuestionBox(this.nation, questionArea);
+
         
         let nationSection = dom.querySelector('.nation-display');
         let nationDisplay = new NationDisplay({

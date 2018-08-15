@@ -48,9 +48,6 @@ export default class NationCreator {
             this.nation.leaderName = tempData[0];
             this.nation.nationName = tempData[1];
             this.nation.nationMotto = tempData[2];
-            
-            console.log('in nation-creator', this.nation);
-
         });
 
 

@@ -11,30 +11,150 @@ let questions = [
         options:[{
             answer: 'No!',
             effects: (nation) => {
-                nation.personalFreedom += 1;
+                nation.personalFreedom += 0.05;
             }
         },
         {
             answer: 'Yes!',
             effects: (nation) => {
-                nation.personalFreedom -= 1;
+                nation.personalFreedom -= 0.05;
             }
         }] 
     },
     {
-        text: 'im another question',
+        text: 'Should we do the macarena?',
         options:[{
-            answer: 'do this',
+            answer: 'yes',
             effects: (nation) => {
-                nation.economicFreedom += 1;
+                nation.economicFreedom += 0.05;
             }
         },
         {
-            text: 'do that',
+            answer: 'of course',
             effects: (nation) => {
-                nation.economicFreedom -= 1;
+                nation.economicFreedom -= 0.05;
             }
         }] 
+    },
+    {
+        text: 'im a third question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im a fourth question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im a fifth question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im sixth question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im seventh question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im eigth question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im ninth question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
+    },
+    {
+        text: 'im tenth question',
+        options: [{
+            answer: 'do this',
+            effects: (nation) => {
+                nation.economicFreedom += 0.05;
+            }
+        },
+        {
+            answer: 'do that',
+            effects: (nation) => {
+                nation.economicFreedom -= 0.05;
+            }
+        }]
     },
 ];
 

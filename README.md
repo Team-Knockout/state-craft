@@ -6,14 +6,7 @@ There are good and bad leaders, but which one are you? In National Pride, the fa
 
 ### To Fix
 
-#### Core Functionality
-
-* use clickable elements instead of radio buttons because the radio buttons are clunky, and clicky boxes are cool looking and easier to use.
-* take the answer that is coming in, look up its effects function, and then call it. we should probably change away from radio buttons before setting this up because the algorithm will be different depending.
-* we need to make the previous question get removed, and the next question that shows up needs to be the _next_ question, not the same one.
-* have the results page render results according to the state of the nation object
-
-#### Easier Stuff
+#### Goals
 
 * make it possible to play again, either by having different players/accounts or by reseting the game back to nil
 * we need more styling.
