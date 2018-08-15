@@ -14,8 +14,12 @@ let template = function() {
     return html`
     <header></header>
     <main>
-        <h2>Answer a question!</h2>
-        <section class="question-area"></section>
+        <section class="question-area">
+            <div class="question-area-title">
+                <h1>What Kind Of Nation Will You ___?</h1>
+                <p>Answer the series of questions below to find out. </p>
+            </div>
+        </section>
         <section class="nation-display"></section>
     </main>
     <footer></footer>

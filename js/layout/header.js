@@ -12,10 +12,11 @@ let template = function(nation) {
                 <a href="results.html">Results</a>
              </div>
             <div class="avatar">
-                <ul>
+                <ul class="avatar-list">
+                    <li><img class="avatar-image" src="${nation.nationFlag}"></li>
                     <li>Name: ${nation.leaderName}</li>
                     <li>Country: ${nation.nationName}</li>
-                    <li >Flag: <img class="flag-image" src="${nation.nationFlag}"></li>
+                  
                 </ul>
             </div>
         </div>

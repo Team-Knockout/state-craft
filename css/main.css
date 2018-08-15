@@ -3,11 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
 * {
-    border: 1px red solid;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    /* border: 1px red solid; */
 }
 
 main {
-    background: #3498db;
+
+    background-image: url("/Users/KaylaRose/dev/bootcamp1/state-craft/assets/backround.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -16,13 +21,71 @@ main {
 
 /* fonts */
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 27px;
+    padding-top: 0px;
+    margin-top: -10px;
+}
+
 p {
+    font-size: 18px;
+
+}
+
+
+/* navigation and header */
+.menu-content {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #34495e;
+}
+    
+.menu-content a {
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+}
+    
+.menu-nav {
+    display: flex;
+}
+
+.avatar {
+    width: 300px;
+    background-color: #f1c404;
+} 
+
+.avatar-list {
+    line-height: 25px;
+    list-style: none;
     font-family: 'Work Sans', sans-serif;
 }
 
+.avatar-image {
+    width: 60px;
+}
+
 /* nation creator page */
-
-
 
 .creator-section {
     background: white;
@@ -30,9 +93,6 @@ p {
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     height: 100%;
-    padding: 0;
-    margin: 0;
-   
     max-width: 800px;
 
 }
@@ -48,7 +108,9 @@ form p {
 }
 
 .form-input {
-
+    font-size: 14px;
+    color:#808080ab;
+    letter-spacing: 1px;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
@@ -92,42 +154,57 @@ label > input:checked + img {
     width: 150px;
     height: 90px;;
 }
+
 /* survey page  */
+.question-area {
+    padding:40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    height: 100%;
+    margin: 0;
+    max-width: 800px;
+}
+
+/* .question-box {
+    background-color: rgb(13, 255, 215);
+}*/
+
+
+.question-area-title
+{
+    padding: 20px;
+    text-align: center;
+    color:white;
+    background-color: #e74c3c;
+}
+
+.question-area-title p {
+    font-size: 22px;
+    margin-top:-20px
+}
 
 .question-box {
     background-color: rgb(13, 255, 215);
 }
+
+.question-text {
+  
+}
 .answer {
-    background-color: maroon;
-    color: white;
+    background-color: #fcfafa;
+    color: #34495e;
     cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+}
+.answer:hover {
+    background-color:#2c3e50;
+    color: white;
+    opacity: 10;
+    box-shadow: 5px 5px 3px rgb(131, 131, 131);
 }
 
-
-/* navigation and header */
-.menu-content {
-    display: none; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #34495e;
-}
-    
-.menu-content a {
-    padding: 5px;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-}
-    
-.menu-nav {
-    display: flex;
-}
-
-.avatar {
-    width: 300px;
-    background-color: #f1c404;
-} 
 
 /* footer */
 footer {
@@ -135,12 +212,6 @@ footer {
     align-items: center;
     justify-content: center;
 }
-/*.footer {
-
-     position: fixed;
-    bottom: 0;
-    padding: 10px;
-    width: 100%; */
 
 .logo{
     height:50px;
@@ -148,20 +219,10 @@ footer {
     width:50px;
 }
 
-/* position:fixed;
-    bottom:10px;
-    left: 600px;
-    width:50px; */
-}
 
 .result-box {
     border: 1px solid #aaaa;
     cursor: pointer;
-}
-.answer:hover {
-    background-color: lightcoral;
-    opacity: 10;
-    box-shadow: 5px 5px 3px rgb(131, 131, 131);
 }
 
 /* responsive */
