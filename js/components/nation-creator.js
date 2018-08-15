@@ -8,16 +8,19 @@ import nationApi from '../services/nation-api.js';
 
 let template = function() {
     return html`
+
+ <div class="creator-section">
     <form>
         Leader Name:<br>
-        <input type="text" name="leaderName" value="Robin of Locksley"><br>
+        <input class="form-input" type="text" name="leaderName" value="Robin of Locksley"><br>
         Nation Name:<br>
-        <input type="text" name="nationName" value="Paradise"><br>
+        <input class="form-input"  type="text" name="nationName" value="Paradise"><br>
         National Motto:<br>
-        <input type="text" name="nationMotto" value="Not all paradise has been lost"><br>
+        <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost"><br>
         
-        <input type="submit" value="startGame" onclick="window.location='/pages/survey.html';">
+        <input class="form-button" type="submit" value="startGame" onclick="window.location='/pages/survey.html';">
     </form>
+</div>
         
    `;
 };
@@ -32,8 +35,8 @@ export default class NationCreator {
     render() {
         let dom = template();
         
-        let form = dom.querySelector('form');
-        form.addEventListener('submit', (event) => {
+        let div = dom.querySelector('div');
+        div.addEventListener('submit', (event) => {
             event.preventDefault();
 
             let inputs = event.target.querySelectorAll('input');
