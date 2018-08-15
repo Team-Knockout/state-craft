@@ -5,12 +5,12 @@
 * {
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    /* border: 1px red solid; */
+    /* border: 1px red solid;  */
 }
 
 main {
 
-    background-image: url("/Users/KaylaRose/dev/bootcamp1/state-craft/assets/backround.jpg");
+    background-image: url("assets/backround.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 40px;
@@ -188,9 +188,6 @@ label > input:checked + img {
     background-color: rgb(13, 255, 215);
 }
 
-.question-text {
-  
-}
 .answer {
     background-color: #fcfafa;
     color: #34495e;
@@ -205,6 +202,54 @@ label > input:checked + img {
     box-shadow: 5px 5px 3px rgb(131, 131, 131);
 }
 
+/* Results*/
+
+.results-main  {
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.results {
+
+    max-width: 800px;
+}
+
+.results h2 {
+    text-align: center;
+}
+
+.result-box {
+    border: 1px solid #aaaa;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px;
+    margin: 20px;
+    border-left: solid 10px #e74c3c;
+
+}
+
+
+.reset {
+    
+    background: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 10px;
+    width:320px;
+}
+
+.reset-button {
+    margin: 0 auto;
+}
 
 /* footer */
 footer {
@@ -219,11 +264,6 @@ footer {
     width:50px;
 }
 
-
-.result-box {
-    border: 1px solid #aaaa;
-    cursor: pointer;
-}
 
 /* responsive */
 @media screen and (min-width: 400px) {

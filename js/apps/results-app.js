@@ -5,7 +5,6 @@ import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
-// import gameStorage from '../services/game-storage.js';
 
 
 
@@ -13,11 +12,14 @@ import nationApi from '../services/nation-api.js';
 let template = function() {
     return html`
     <header></header>
-        <main>
-            <h2>Here are your results</h2>
-            <section class="results"></section>
+        <main class="results-main"" >
+            <section class="results">
+                <h2>Here are your results</h2>
+            </section>
+            <section class="reset-button">
+                <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
+            </section>
         </main>
-        <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
     <footer></footer>
         
    `;
@@ -45,7 +47,6 @@ export default class App{
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
-            //  <a href="index.html">Home</a>
             console.log('reset ran');
         });
         
@@ -84,11 +85,6 @@ export default class App{
                 resultSection.appendChild(result.render());
             }
         }
-        // function handleResetNation () { 
-        //     resetNation.addEventListener('click', () => {
-        //         window.resetNation();
-        //     });
-        // };
  
         let keyArray = [];
         let valueArray = [];
