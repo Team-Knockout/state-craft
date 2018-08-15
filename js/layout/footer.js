@@ -5,7 +5,7 @@ let template = function() {
     <footer class="footer">
     © Statecraft | 2018
     </footer>
-    <img class="logo" src="../assets/logo.jpg">
+    <img class="logo" src="assets/logo.jpg">
 
    `;
 };
