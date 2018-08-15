@@ -10,9 +10,10 @@
 
 main {
 
-    background-image: url("assets/backround.jpg");
+    background-image: url("../assets/background.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 40px;
     display: flex;
     justify-content: center;
