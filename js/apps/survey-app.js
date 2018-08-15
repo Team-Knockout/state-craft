@@ -14,12 +14,11 @@ let template = function() {
     return html`
     <header></header>
     <main>
-        <section class="question-area">
-            <div class="question-area-title">
-                <h1>What Kind Of Nation Will You ___?</h1>
-                <p>Answer the series of questions below to find out. </p>
-            </div>
-        </section>
+        <div class="question-area-title">
+            <h1>What Kind Of Nation Will You ___?</h1>
+            <p>Answer the series of questions below to find out. </p>
+        </div>
+        <section class="question-area"></section>
         <section class="nation-display"></section>
     </main>
     <footer></footer>
@@ -45,7 +44,7 @@ export default class App {
         head.appendChild(header.render());
         foot.appendChild(footer.render());
 
-        let questionArea = dom.querySelector('.question-area');   
+        let questionArea = dom.querySelector('.question-area');
         let questionBox = new QuestionBox({
             reRenderQuestionBox: (nation, location) => {
                 while(questionArea.lastElementChild){
@@ -55,7 +54,6 @@ export default class App {
             },
             questionArea: questionArea,
         });
-        
 
         function warning() {
             return html`
