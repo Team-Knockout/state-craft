@@ -4,11 +4,15 @@ In Statecraft, the fate of your nation lies in your hands. Will you be proud of 
 
 ## To Fix
 
-* change header on start page 
+* fix positioning on results page
+* change header on start page
+* change class names
+* clean up data/props in classes (import once, then send down component tree)
+* clean up CSS
+* make it more responsive
 
 ## Improvement Goals
 
-* we need more styling.
 * we need more questions and results.
 * make it possible to play again, either by having different players/accounts or by reseting the game back to nil
 * add dynamic content to question and answer texts
