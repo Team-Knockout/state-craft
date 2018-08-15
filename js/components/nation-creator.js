@@ -37,6 +37,7 @@ let template = function() {
         </label>
    
         <input class="form-button" type="submit" value="StartGame" required>
+        <p><sup>*</sup>required</p>
     </form>
 </div>
         
