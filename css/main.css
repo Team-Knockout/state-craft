@@ -130,22 +130,41 @@ label > input:checked + img {
 } 
 
 /* footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    height:40px;
-    text-align: center;
-    width: 100%;
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+/*.footer {
+
+     position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 100%; */
+
 .logo{
-    position:fixed;
-    bottom:10px;
-    left: 600px;
+    height:50px;
+    margin: 10px;
     width:50px;
 }
 
+/* position:fixed;
+    bottom:10px;
+    left: 600px;
+    width:50px; */
+}
+
+.result-box {
+    border: 1px solid #aaaa;
+    cursor: pointer;
+}
+.answer:hover {
+    background-color: lightcoral;
+    opacity: 10;
+    box-shadow: 5px 5px 3px rgb(131, 131, 131);
+}
+
 /* responsive */
-    
 @media screen and (min-width: 400px) {
     .menu-content {
     display:flex;

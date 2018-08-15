@@ -2,7 +2,9 @@ import html from '../libs/html.js';
 
 let template = function(text) {
     return html`
+    <div class="result-box">
         <p>${text}</p>
+    </div>
    `;
 };
 
