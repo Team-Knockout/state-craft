@@ -6,24 +6,35 @@
 
 // source: https://nsindex.net/wiki/NationStates_Issue_No._1
 
+/*
+To Do:
+- fix names with either dynamic input during question/answer creation, or create static names to use
+- add response component to display response text during survey. response text has been added to the first question in question api for reference of where it should go.
+
+
+*/
+
 let questions = [
     {
         title: 'Should Democracy Be Compulsory?',
         text: 'In response to a slow news week, certain highbrow newspapers have stirred up the debate over voluntary vs compulsory voting.',
         options:[{
             answer: '"Compulsory voting makes about as much sense as having the death penalty for attempted suicide," says civil rights activist @@RANDOMNAME@@. "You can\'t force people to be free! You can only give them the choice. Besides, if all those derelicts who can\'t be bothered to get off their butts once every few years voted, who would they elect? I shudder to think."',
+            response: 'Voting is voluntary.',
             effects: (nation) => {
                 nation.personalFreedom += 0.05;
             }
         },
         {
             answer: '"It\'s not contradictory at all," argues political commentator @@RANDOMNAME@@. "The fact is, if not everyone votes, the outcome isn\'t truly representative. Some groups—like elderly gun nuts—vote more often than others. That\'s why we always end up with such terrible politicians."',
+            response: 'Voting is compulsory.',
             effects: (nation) => {
                 nation.personalFreedom -= 0.05;
             }
         },
         {
             answer: '"This raises an interesting issue," says @@RANDOMMALENAME@@, your brother. "And that is: why do we need elections, anyway? Seems to me it would be much simpler if you just decided what was right, and did it. Wouldn\'t that save everyone a lot of time?"',
+            response: 'Elections have been outlawed.',
             effects: (nation) => {
                 nation.personalFreedom -= 0.05;
             }
