@@ -9,6 +9,7 @@ There are good and bad leaders, but which one are you? In National Pride, the fa
 #### Core Functionality
 
 * refactor everything
+* account for cases where nation property has a negative value
 * fix bug where the data is currently updated in a JS object but should be updated in local storage
 
 #### Easier Stuff
