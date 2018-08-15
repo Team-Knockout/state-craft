@@ -13,8 +13,11 @@ let template = function() {
     return html`
     <header></header>
         <main>
+            <section class="results">
+            
             <h2>Here are your results</h2>
-            <section class="results"></section>
+            
+            </section>
         </main>
     <footer></footer>
         
