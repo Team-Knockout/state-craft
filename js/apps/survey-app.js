@@ -34,6 +34,7 @@ export default class App {
     render() {
 
         let dom = template();
+        let main = dom.querySelector('main');
 
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
@@ -45,6 +46,7 @@ export default class App {
         foot.appendChild(footer.render());
 
         let questionArea = dom.querySelector('.question-area');
+        let questionAreaTitle = dom.querySelector('.question-area-title');
         let questionBox = new QuestionBox({
             reRenderQuestionBox: (nation, location) => {
                 while(questionArea.lastElementChild){
@@ -67,6 +69,10 @@ export default class App {
                 location.appendChild(questionBox.render());
             }
             else {
+                while(questionAreaTitle.lastChild){
+                    questionAreaTitle.lastChild.remove();
+                }
+                questionAreaTitle.setAttribute('style', 'display:none;');
                 location.appendChild(warning());
             }
         }
