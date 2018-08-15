@@ -30,7 +30,7 @@ let questions = [
             }
         },
         {
-            text: 'of course',
+            answer: 'of course',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -45,7 +45,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -60,7 +60,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -75,7 +75,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -90,7 +90,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -105,7 +105,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -120,7 +120,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -135,7 +135,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
@@ -150,7 +150,7 @@ let questions = [
             }
         },
         {
-            text: 'do that',
+            answer: 'do that',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
