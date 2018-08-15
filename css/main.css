@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
 p {
@@ -13,4 +14,45 @@ p {
     background-color: maroon;
     color: white;
     cursor: pointer;
+}
+
+.menu-content {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+    justify-content: space-between;
+}
+    
+.menu-content a {
+    padding: 5px;
+
+    text-align: center;
+    color: black;
+
+    text-decoration: none;
+}
+    
+.avatar {
+    width: 300px;
+} 
+.footer {
+    position: fixed;
+    bottom: 0;
+    height:40px;
+    text-align: center;
+    width: 100%;
+}
+.logo{
+    position:absolute;
+    bottom:10px;
+    left: 600px;
+    width:50px;
+}
+    
+@media screen and (min-width: 400px) {
+    .menu-content {
+    display:flex;
+    flex-direction: row;
+    }
 }
