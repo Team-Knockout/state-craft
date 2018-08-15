@@ -11,17 +11,11 @@ let template = function(nation) {
 
 export default class NationDisplay {
     constructor(props) {
-
         this.nation = props.nation;
-        console.log('this.nation', this.nation);
-
-
-       
     }
 
     render() {
         let dom = template(this.nation);
-        // this.p = dom.querySelector('p');
         return dom;
     }
 }
