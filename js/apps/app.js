@@ -9,7 +9,9 @@ import nationApi from '../services/nation-api.js';
 let template = function() {
     return html`
     <header></header>
-    <main>Hello World</main>
+    <main>
+        
+    </main>
     <footer></footer>
    `;
 };

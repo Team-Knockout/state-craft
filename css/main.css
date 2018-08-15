@@ -2,10 +2,64 @@
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
-p {
-    font-family:font-family: 'Work Sans', sans-serif;
-    
+
+main {
+    background: #3498db;
+    padding: 40px;
 }
+
+/* fonts */
+
+p {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* nation creator page */
+
+
+
+.creator-section {
+    display: flex;
+    background: white;
+    justify-content: center;
+    width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+form {
+    font-family: 'Work Sans', sans-serif;
+}
+
+form p {
+   margin: 20px;
+}
+
+.form-input {
+
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #eee;
+    height: 30px;
+    width: 300px;
+
+}
+
+.form-button {
+    background: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 10px;
+    width:320px;
+
+}
+/* survey page  */
 
 .question-box {
     background-color: rgb(13, 255, 215);
@@ -16,6 +70,8 @@ p {
     cursor: pointer;
 }
 
+
+/* navigation and header */
 .menu-content {
     display: none; 
     flex-direction: column;
@@ -29,13 +85,14 @@ p {
 
     text-align: center;
     color: black;
-
     text-decoration: none;
 }
     
 .avatar {
     width: 300px;
 } 
+
+/* footer */
 .footer {
     position: fixed;
     bottom: 0;
@@ -49,6 +106,8 @@ p {
     left: 600px;
     width:50px;
 }
+
+/* responsive */
     
 @media screen and (min-width: 400px) {
     .menu-content {
