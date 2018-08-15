@@ -1,18 +1,7 @@
 
-// How to access
-// questions[i]['text']
-// questions[i]['options'][j].answer
-// questions[i]['options'][j].effects(this.nation)
-
 // source: https://nsindex.net/wiki/NationStates_Issue_No._1
 
-/*
-To Do:
-- fix names with either dynamic input during question/answer creation, or create static names to use
-- add response component to display response text during survey. response text has been added to the first question in question api for reference of where it should go.
-- calculate approval at the end instead as a derived value?
 
-*/
 
 let questions = [
     {
