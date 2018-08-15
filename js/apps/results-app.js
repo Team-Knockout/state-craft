@@ -45,7 +45,7 @@ export default class App{
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
-          //  <a href="index.html">Home</a>
+            //  <a href="index.html">Home</a>
             console.log('reset ran');
         });
         
