@@ -5,14 +5,17 @@ let template = function(nation) {
     return html`
     <nav>
         <div class="menu-content">
+        <p></p>
+             <div class="menu-nav">
                 <a href="index.html">Home</a>
                 <a href="survey.html">Play Game</a>
                 <a href="results.html">Results</a>
+             </div>
             <div class="avatar">
                 <ul>
                     <li>Name: ${nation.leaderName}</li>
                     <li>Country: ${nation.nationName}</li>
-                    <li>Flag: <img src="${nation.nationFlag}"></li>
+                    <li >Flag: <img class="flag-image" src="${nation.nationFlag}"></li>
                 </ul>
             </div>
         </div>
