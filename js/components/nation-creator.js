@@ -17,23 +17,19 @@ let template = function() {
         <input class="form-input"  type="text" name="nationName" value="Paradise"><br>
         National Motto:<br>
         <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost"><br>
-        <label>
-            <input type="radio" name="nationFlag" value="../assets/flag1.png"/>
-            <img src="../assets/flag1.png">
-        </label>
-        <label>
-            <input type="radio" name="nationFlag" value="../assets/flag2.png"/>
-            <img src="../assets/flag2.png">
-        </label>
-        <label>
-            <input type="radio" name="nationFlag" value="../assets/flag3.png"/>
-            <img src="../assets/flag3.png">
-        </label>
-        <label>
-            <input type="radio" name="nationFlag" value="../assets/flag4.png"/>
-            <img src="../assets/flag4.png">
-        </label>
         
+        <input type="radio" name="nationFlag" value="../assets/flag1.png"/>
+        <img src="../assets/flag1.png">
+        
+        <input type="radio" name="nationFlag" value="../assets/flag2.png"/>
+        <img src="../assets/flag2.png">
+    
+        <input type="radio" name="nationFlag" value="../assets/flag3.png"/>
+        <img src="../assets/flag3.png">
+    
+        <input type="radio" name="nationFlag" value="../assets/flag4.png"/>
+        <img src="../assets/flag4.png">
+    
         <input class="form-button" type="submit" value="startGame" onclick="window.location='/pages/survey.html';">
     </form>
 </div>
@@ -56,18 +52,22 @@ export default class NationCreator {
             event.preventDefault();
 
             let inputs = event.target.querySelectorAll('input');
+            console.log(inputs);
 
             let tempData = [];
 
             for(let i = 0; i < inputs.length; i++) {
                 let attribute = inputs[i].value;
                 tempData.push(attribute);
+
+                if(inputs[i].checked){
+                    this.nation.nationFlag = tempData[i];
+                }
             }
 
             this.nation.leaderName = tempData[0];
             this.nation.nationName = tempData[1];
             this.nation.nationMotto = tempData[2];
-            this.nation.nationFlag = tempData[3];
         });
 
 
