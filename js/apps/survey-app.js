@@ -28,8 +28,6 @@ export default class App {
     constructor() {
         // this.questions = questionApi.getAll();
         this.nation = nationApi.get();
-
-        console.log('nations showing', this.nation);
     }
 
     render() {
@@ -43,22 +41,35 @@ export default class App {
         head.appendChild(header.render());
         foot.appendChild(footer.render());
 
-
         let questionArea = dom.querySelector('.question-area');   
-        let questionBox = new QuestionBox({});
- 
-        function warning(){
+        let questionBox = new QuestionBox({
+            reRenderQuestionBox: (nation, location) => {
+                while(questionArea.lastElementChild){
+                    questionArea.lastElementChild.remove();
+                }
+                renderQuestionBox(nation, location);
+            },
+            questionArea: questionArea,
+        });
+        
+
+        function warning() {
             return html`
                 <p>You've already answered all of the questions!</p>
                 <p>Dev note: run resetNation() in the console to be able to play again</p>
             `;
-        }     
-        if(this.nation.question < 10) {
-            questionArea.appendChild(questionBox.render());
         }
-        else {
-            questionArea.appendChild(warning());
+
+        function renderQuestionBox(nation, location) {
+            if(nation.question < 10) {
+                location.appendChild(questionBox.render());
+            }
+            else {
+                location.appendChild(warning());
+            }
         }
+        renderQuestionBox(this.nation, questionArea);
+
         
         let nationSection = dom.querySelector('.nation-display');
         let nationDisplay = new NationDisplay({

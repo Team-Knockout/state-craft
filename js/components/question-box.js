@@ -19,6 +19,8 @@ export default class QuestionBox{
         this.questions = questionApi.getAll();
         this.nation = nationApi.get();
         this.question = props.question;
+        this.reRenderQuestionBox = props.reRenderQuestionBox;
+        this.questionArea = props.questionArea;
     }
 
     render() {
@@ -33,8 +35,6 @@ export default class QuestionBox{
         questionText.appendChild(newQuestion.render());
 
         
-
-        //  this.questions[this.nation.question] selects a question in the question api
         for(let i = 0; i < this.questions[this.nation.question].options.length; i++) {
             
             let answer = new Answer({
@@ -43,45 +43,20 @@ export default class QuestionBox{
                 index: i,
                 handleAnswer: (selectedIndex) => {
 
-
-                    //increment the nation object
                     this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
                     this.nation.question++;
-
-                    //helper function
-                    function clearElements(element) {
-                        while(element.lastElementChild) {
-                            element.lastElementChild.remove();
-                        }    
-                    }
-
-                    if(this.nation.question < 10) {
-
-                        // clearing elements
-                        clearElements(questionText);
-                        clearElements(answerList);
-                        
-                        // setting non-existent objects' properties to new values
-                        newQuestion.question = this.questions[this.nation.question];
-                        answer.question = this.questions[this.nation.question];
-    
-                        //appending the dom with the non-existent objects' new values
-                        questionText.appendChild(newQuestion.render());
-                        answerList.appendChild(answer.render());
+                    
+                    if(this.nation.question >= 10) {
+                        window.location.replace('/pages/results.html');
                     }
                     else {
-                        window.location.replace('/pages/results.html');
+                        this.reRenderQuestionBox(this.nation, this.questionArea);
                     }
                 },
             });
-
             answerList.appendChild(answer.render());
         }
-
-            
+        
         return dom;
     }
 }
-
-
-    
