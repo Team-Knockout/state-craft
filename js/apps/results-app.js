@@ -17,9 +17,7 @@ let template = function() {
             <h2>Here are your results</h2>
             <section class="results"></section>
         </main>
-    <form onsubmit="window.location='index.html';">
-        <input class="reset" type="submit" name="reset" value="Play Again">
-    </form>
+        <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
     <footer></footer>
         
    `;
@@ -47,6 +45,7 @@ export default class App{
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
+          //  <a href="index.html">Home</a>
             console.log('reset ran');
         });
         
