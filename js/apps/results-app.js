@@ -53,11 +53,14 @@ export default class App{
         function valuesToIndexes(arrayIn, arrayOut) {
             for(let i = 0; i < arrayIn.length; i++) {
                 let roundedNum = Math.floor(arrayIn[i]);
-                if(roundedNum < 4){
-                    arrayOut.push(roundedNum);
+                if(roundedNum > 4){
+                    arrayOut.push(4);
+                }
+                else if(roundedNum < 0){
+                    arrayOut.push(0);
                 }
                 else {
-                    arrayOut.push(4);
+                    arrayOut.push(roundedNum);
                 }
             }
         }
