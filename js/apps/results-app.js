@@ -5,7 +5,6 @@ import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
-// import gameStorage from '../services/game-storage.js';
 
 
 
@@ -45,7 +44,6 @@ export default class App{
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
-            //  <a href="index.html">Home</a>
             console.log('reset ran');
         });
         
@@ -84,11 +82,6 @@ export default class App{
                 resultSection.appendChild(result.render());
             }
         }
-        // function handleResetNation () { 
-        //     resetNation.addEventListener('click', () => {
-        //         window.resetNation();
-        //     });
-        // };
  
         let keyArray = [];
         let valueArray = [];
