@@ -5,7 +5,7 @@
 * {
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    /* border: 1px red solid; */
+    /* border: 1px red solid;  */
 }
 
 main {
@@ -205,6 +205,21 @@ label > input:checked + img {
     box-shadow: 5px 5px 3px rgb(131, 131, 131);
 }
 
+/* Results*/
+
+.results h2 {
+    text-align: center;
+}
+
+.result-box {
+    border: 1px solid #aaaa;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px;
+    margin: 20px;
+    border-left: solid 10px #e74c3c;
+
+}
 
 /* footer */
 footer {
@@ -219,11 +234,6 @@ footer {
     width:50px;
 }
 
-
-.result-box {
-    border: 1px solid #aaaa;
-    cursor: pointer;
-}
 
 /* responsive */
 @media screen and (min-width: 400px) {
