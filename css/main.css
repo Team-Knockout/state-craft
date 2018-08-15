@@ -2,10 +2,97 @@
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
-p {
-    font-family:font-family: 'Work Sans', sans-serif;
-    
+* {
+    border: 1px red solid;
 }
+
+main {
+    background: #3498db;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+/* fonts */
+
+p {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* nation creator page */
+
+
+
+.creator-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   
+    max-width: 800px;
+
+}
+
+form {
+    font-family: 'Work Sans', sans-serif;
+   
+    padding:30px;
+}
+
+form p {
+   margin: 20px;
+}
+
+.form-input {
+
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #eee;
+    height: 30px;
+    width: 300px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+
+
+}
+
+label > input {
+    visibility: hidden; 
+    position: absolute;
+}
+
+label > input + img {
+    cursor: pointer;
+    border: 2px solid transparent;
+
+}
+
+label > input:checked + img {
+    border: 2px solid #f00;
+}
+.form-button {
+    background: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 10px;
+    width:320px;
+
+}
+
+.flag-image {
+    width: 150px;
+    height: 90px;;
+}
+/* survey page  */
 
 .question-box {
     background-color: rgb(13, 255, 215);
@@ -16,40 +103,57 @@ p {
     cursor: pointer;
 }
 
+
+/* navigation and header */
 .menu-content {
     display: none; 
     flex-direction: column;
     align-items: center;
-    background-color: yellow;
     justify-content: space-between;
+    background-color: #34495e;
 }
     
 .menu-content a {
     padding: 5px;
-
     text-align: center;
     color: black;
-
     text-decoration: none;
 }
     
+.menu-nav {
+    display: flex;
+}
+
 .avatar {
     width: 300px;
+    background-color: #f1c404;
 } 
+
+/* footer */
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+}
+/*.footer {
+
+     position: fixed;
     bottom: 0;
     padding: 10px;
-    width: 100%;
-}
+    width: 100%; */
+
 .logo{
     height:50px;
     margin: 10px;
     width:50px;
 }
+
+/* position:fixed;
+    bottom:10px;
+    left: 600px;
+    width:50px; */
+}
+
 .result-box {
     border: 1px solid #aaaa;
     cursor: pointer;
@@ -59,6 +163,8 @@ footer {
     opacity: 10;
     box-shadow: 5px 5px 3px rgb(131, 131, 131);
 }
+
+/* responsive */
 @media screen and (min-width: 400px) {
     .menu-content {
     display:flex;
