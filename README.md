@@ -4,7 +4,6 @@ In Statecraft, the fate of your nation lies in your hands. Will you be proud of 
 
 ## To Fix
 
-* fix positioning on results page
 * change header on start page
 * change class names
 * clean up data/props in classes (import once, then send down component tree)
