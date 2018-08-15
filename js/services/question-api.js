@@ -22,15 +22,15 @@ let questions = [
         }] 
     },
     {
-        text: 'im another question',
+        text: 'Should we do the macarena?',
         options:[{
-            answer: 'do this',
+            answer: 'yes',
             effects: (nation) => {
                 nation.economicFreedom += 0.05;
             }
         },
         {
-            text: 'do that',
+            text: 'of course',
             effects: (nation) => {
                 nation.economicFreedom -= 0.05;
             }
