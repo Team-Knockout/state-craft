@@ -234,6 +234,24 @@ footer {
     width:50px;
 }
 
+.results-main {
+    display: flex;
+    flex-direction:column;
+}
+
+.reset {
+    background: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 10px;
+    width:320px;
+
+
+}
 
 /* responsive */
 @media screen and (min-width: 400px) {
