@@ -2,7 +2,11 @@
 
 In Statecraft, the fate of your nation lies in your hands. Will you be proud of your work?
 
-## Goals
+## To Fix
+
+* change header on start page 
+
+## Improvement Goals
 
 * we need more styling.
 * we need more questions and results.
