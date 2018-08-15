@@ -4,6 +4,7 @@
 // questions[i]['options'][j].answer
 // questions[i]['options'][j].effects(this.nation)
 
+//source: https://nsindex.net/wiki/NationStates_Issue_No._1
 
 let questions = [
     {
