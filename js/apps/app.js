@@ -31,9 +31,7 @@ export default class App {
         let footer = new Footer;
         head.appendChild(header.render());
         foot.appendChild(footer.render());
-        
-        console.log('in app.js', this.nation);
-        
+                
         let main = dom.querySelector('main');
         let nationCreator = new NationCreator({
             test: 'i a prop',
