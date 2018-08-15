@@ -5,7 +5,7 @@ let template = function(nation) {
         <p>Leader Name: ${nation.leaderName} </p>
         <p>Nation Name: ${nation.nationName}</p>
         <p>Nation Motto: ${nation.nationMotto}</p>
-        <p>Nation Flag: </p>
+        <p>Nation Flag: <img src="${nation.nationFlag}"></p>
    `;
 };
 

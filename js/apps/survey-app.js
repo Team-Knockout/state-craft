@@ -8,8 +8,6 @@ import Footer from '../layout/footer.js';
 
 import QuestionBox from '../components/question-box.js';
 // import questionApi from '../services/question-api.js';
-
-import NationDisplay from '../components/nation-display.js';
 import nationApi from '../services/nation-api.js';
 
 let template = function() {
@@ -71,13 +69,6 @@ export default class App {
             }
         }
         renderQuestionBox(this.nation, questionArea);
-
-        
-        let nationSection = dom.querySelector('.nation-display');
-        let nationDisplay = new NationDisplay({
-            nation: this.nation
-        });
-        nationSection.appendChild(nationDisplay.render());
 
         return dom;
     }
