@@ -30,7 +30,7 @@ let template = function() {
         <input type="radio" name="nationFlag" value="assets/flag4.png"/>
         <img src="assets/flag4.png">
     
-        <input class="form-button" type="submit" value="startGame" onclick="window.location='/pages/survey.html';">
+        <input class="form-button" type="submit" value="startGame" onclick="window.location='survey.html';">
     </form>
 </div>
         

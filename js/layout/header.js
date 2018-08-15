@@ -6,8 +6,8 @@ let template = function(nation) {
     <nav>
         <div class="menu-content">
                 <a href="index.html">Home</a>
-                <a href="pages/survey.html">Play Game</a>
-                <a href="pages/results.html">Results</a>
+                <a href="survey.html">Play Game</a>
+                <a href="results.html">Results</a>
             <div class="avatar">
                 <ul>
                     <li>Name: ${nation.leaderName}</li>

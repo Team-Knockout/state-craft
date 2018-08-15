@@ -47,7 +47,7 @@ export default class QuestionBox{
                     this.nation.question++;
                     
                     if(this.nation.question >= 10) {
-                        window.location.replace('/pages/results.html');
+                        window.location.replace('results.html');
                     }
                     else {
                         this.reRenderQuestionBox(this.nation, this.questionArea);
