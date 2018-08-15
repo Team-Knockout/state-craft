@@ -7,7 +7,7 @@
 }
 
 main {
-    background: #3498db;
+    background: #ecf0f1;
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -115,8 +115,11 @@ label > input:checked + img {
     
 .menu-content a {
     padding: 5px;
+    margin-right: 10px;
     text-align: center;
-    color: black;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Work Sans', sans-serif;
     text-decoration: none;
 }
     
@@ -128,6 +131,16 @@ label > input:checked + img {
     width: 300px;
     background-color: #f1c404;
 } 
+
+.avatar-list {
+    line-height: 25px;
+    list-style: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.avatar-image {
+    width: 60px;
+}
 
 /* footer */
 footer {
