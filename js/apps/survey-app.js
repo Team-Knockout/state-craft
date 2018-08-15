@@ -14,7 +14,7 @@ let template = function() {
     return html`
     <header></header>
     <main>
-        <h2>Answer a question!</h2>
+        <h2 class="survey-qmark">?</h2>
         <section class="question-area"></section>
         <section class="nation-display"></section>
     </main>

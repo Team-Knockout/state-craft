@@ -94,6 +94,10 @@ label > input:checked + img {
 }
 /* survey page  */
 
+.survey-qmark {
+    font-size: 172px;
+}
+
 .question-box {
     background-color: rgb(13, 255, 215);
 }
