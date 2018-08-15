@@ -5,6 +5,7 @@ import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
+// import gameStorage from '../services/game-storage.js';
 
 
 
@@ -16,6 +17,9 @@ let template = function() {
             <h2>Here are your results</h2>
             <section class="results"></section>
         </main>
+    <form onsubmit="window.location='index.html';">
+        <input class="reset" type="submit" name="reset" value="Play Again">
+    </form>
     <footer></footer>
         
    `;
@@ -29,9 +33,9 @@ export default class App{
 
     render() {
         let dom = template();
-
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
+        let resetNation = dom.querySelector('.reset');
         let header = new Header({
             nation: this.nation
         });
@@ -41,6 +45,10 @@ export default class App{
 
         let resultSection = dom.querySelector('.results');
         
+        resetNation.addEventListener('click', () => {
+            window.resetNation();
+            console.log('reset ran');
+        });
         
         function getResultsKeys(arrayOut) {
             for(let i = 0; i < resultsApi.get().length; i++) {
@@ -77,7 +85,12 @@ export default class App{
                 resultSection.appendChild(result.render());
             }
         }
-        
+        // function handleResetNation () { 
+        //     resetNation.addEventListener('click', () => {
+        //         window.resetNation();
+        //     });
+        // };
+ 
         let keyArray = [];
         let valueArray = [];
         let indexArray = [];
