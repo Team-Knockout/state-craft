@@ -3,8 +3,8 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
-import resultsApi from '/js/services/results-api.js';
-import nationApi from '/js/services/nation-api.js';
+import resultsApi from '../services/results-api.js';
+import nationApi from '../services/nation-api.js';
 
 
 
