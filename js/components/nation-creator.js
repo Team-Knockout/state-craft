@@ -10,33 +10,34 @@ let template = function() {
     return html`
 
  <div class="creator-section">
-    <form>
-        Leader Name:<br>
-        <input class="form-input" type="text" name="leaderName" value="Robin of Locksley"><br>
-        Nation Name:<br>
-        <input class="form-input"  type="text" name="nationName" value="Paradise"><br>
-        National Motto:<br>
-        <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost"><br>
+    <form onsubmit="window.location='survey.html';">
+        <sup>*</sup>Leader Name:<br>
+        <input class="form-input" type="text" name="leaderName" value="Robin of Locksley" required><br>
+        <sup>*</sup>Nation Name:<br>
+        <input class="form-input"  type="text" name="nationName" value="Paradise" required><br>
+        <sup>*</sup>National Motto:<br>
+        <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost" required><br>
         
-
+        <sup>*</sup>Pick a Flag:<br>
         <label>
-            <input type="radio" name="nationFlag" value="assets/flag1.png"/>
+            <input type="radio" name="nationFlag" value="assets/flag1.png" required/>
             <img class="flag-image" src="assets/flag1.png">
         </label>
         <label>
-            <input type="radio" name="nationFlag" value="assets/flag2.png"/>
+            <input type="radio" name="nationFlag" value="assets/flag2.png" required/>
             <img class="flag-image" src="assets/flag2.png">
         </label>
         <label>
-            <input type="radio" name="nationFlag" value="assets/flag3.png"/>
+            <input type="radio" name="nationFlag" value="assets/flag3.png" required/>
             <img class="flag-image" src="assets/flag3.png">
         </label>
         <label>
-            <input type="radio" name="nationFlag" value="assets/flag4.png"/>
+            <input type="radio" name="nationFlag" value="assets/flag4.png" required/>
             <img class="flag-image" src="assets/flag4.png">
         </label>
    
-        <input class="form-button" type="submit" value="startGame" onclick="window.location='survey.html';">
+        <input class="form-button" type="submit" value="StartGame" required>
+        <p><sup>*</sup>required</p>
     </form>
 </div>
         

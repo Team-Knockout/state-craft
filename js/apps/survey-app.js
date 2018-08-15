@@ -14,7 +14,6 @@ let template = function() {
     return html`
     <header></header>
     <main>
-   
         <section class="question-area">
             <div class="question-area-title">
                 <h1>What Kind Of Nation Will You ___?</h1>

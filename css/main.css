@@ -156,7 +156,6 @@ label > input:checked + img {
 }
 
 /* survey page  */
-
 .question-area {
     padding:40px;
     background: white;
@@ -165,8 +164,12 @@ label > input:checked + img {
     height: 100%;
     margin: 0;
     max-width: 800px;
-
 }
+
+/* .question-box {
+    background-color: rgb(13, 255, 215);
+}*/
+
 
 .question-area-title
 {
