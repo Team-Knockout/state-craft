@@ -34,7 +34,6 @@ export default class App {
     render() {
 
         let dom = template();
-        let main = dom.querySelector('main');
 
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
