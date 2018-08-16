@@ -1,6 +1,3 @@
-
-
-
 import html from '../libs/html.js';
   
 import Header from '../layout/header.js';

@@ -1,14 +1,10 @@
 import html from '../libs/html.js';
-
-// import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
-
 import NationCreator from '../components/nation-creator.js';
 import nationApi from '../services/nation-api.js';
 
 let template = function() {
     return html`
-    <!-- <header></header> -->
     <main class="home-page">
         
     </main>
@@ -26,13 +22,8 @@ export default class App {
 
         let dom = template();
         
-        // let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
-        // let header = new Header({
-        //     nation:this.nation
-        // });
         let footer = new Footer;
-        // head.appendChild(header.render());
         foot.appendChild(footer.render());
                 
         let main = dom.querySelector('main');

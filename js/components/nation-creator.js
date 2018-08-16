@@ -1,6 +1,3 @@
-//* this is the page with the form that collects users leader name, country name,
-//* flag
-
 import html from '../libs/html.js';
 import nationApi from '../services/nation-api.js';
 
@@ -10,7 +7,10 @@ let template = function() {
  <div class="flex-container">
 
     <section class="homepage-intro-area">
-        <h1>Welcome </h1>
+        <h1>StateCraft</h1> 
+        <h3>See if you have want it takes to run a nation!</h3>
+        <p>To begin your term as
+        leader; create your nation, pick a flag and start the game </p>
         <img class="welcome-image" src="../../assets/little-man-homepage.png">
     </section>
 
@@ -24,23 +24,24 @@ let template = function() {
             <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost" required><br>
             
             <sup>*</sup>Pick a Flag:<br>
-            <label>
-                <input type="radio" name="nationFlag" value="assets/flag1.png" required/>
-                <img class="flag-image" src="assets/flag1.png">
-            </label>
-            <label>
-                <input type="radio" name="nationFlag" value="assets/flag2.png" required/>
-                <img class="flag-image" src="assets/flag2.png">
-            </label>
-            <label>
-                <input type="radio" name="nationFlag" value="assets/flag3.png" required/>
-                <img class="flag-image" src="assets/flag3.png">
-            </label>
-            <label>
-                <input type="radio" name="nationFlag" value="assets/flag4.png" required/>
-                <img class="flag-image" src="assets/flag4.png">
-            </label>
-    
+            <section class="homepage-flags">
+                <label>
+                    <input type="radio" name="nationFlag" value="assets/flag1.png" required/>
+                    <img class="flag-image" src="assets/flag1.png">
+                </label>
+                <label>
+                    <input type="radio" name="nationFlag" value="assets/flag2.png" required/>
+                    <img class="flag-image" src="assets/flag2.png">
+                </label>
+                <label>
+                    <input type="radio" name="nationFlag" value="assets/flag3.png" required/>
+                    <img class="flag-image" src="assets/flag3.png">
+                </label>
+                <label>
+                    <input type="radio" name="nationFlag" value="assets/flag4.png" required/>
+                    <img class="flag-image" src="assets/flag4.png">
+                </label>
+            </section>
             <input class="form-button" type="submit" value="StartGame" required>
             <p><sup>*</sup>required</p>
         </form>
@@ -54,7 +55,6 @@ let template = function() {
 export default class NationCreator {
     constructor() {
         this.nation = nationApi.get();
-
        
     }
 
@@ -83,7 +83,6 @@ export default class NationCreator {
             this.nation.nationName = tempData[1];
             this.nation.nationMotto = tempData[2];
         });
-
 
         return dom;
     }

@@ -61,7 +61,6 @@ main {
 }
     
 .menu-nav {
-
     margin-left: 50px;
 }
 
@@ -83,6 +82,8 @@ main {
 /* home page */
 
 .home-page {
+    padding-top: 80px;
+    padding-bottom:100px;
     background: #2c3e50
  }
  
@@ -92,21 +93,37 @@ main {
     max-width: 1200px;
     height: 100%;
     margin: 0;
-
 }
 
 .homepage-intro-area {
     color:white;
-    font-size: 30px;
+    max-width: 500px;
     text-align: center;
+    margin-right:30px;
+
 }
 
 .homepage-intro-area h1 {
     color:white;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom:200px;
+    font-size: 92px;
+    margin: 0;
 }
+
+.homepage-intro-area h3 {
+    color:white;
+    font-size: 22px;
+
+}
+
+.homepage-intro-area p {
+    color:white;
+    font-size: 20px;
+    line-height: 27px;
+    padding-right: 20px;
+    padding-left:20px;
+
+}
+
 .welcome-image {
     margin-bottom: -4px;
     align-self: flex-end;
@@ -114,17 +131,15 @@ main {
 }
 
 .creator-section {
-   
-    margin-left:-30px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-
+    width: 900px;
+    padding-top:30px;
 }
 
 form {
     font-family: 'Work Sans', sans-serif;
-   
     padding:30px;
 }
 
@@ -173,8 +188,8 @@ label > input:checked + img {
 }
 
 .flag-image {
-    width: 150px;
-    height: 90px;;
+    width: 140px;
+    height: 80px;;
 }
 
 /* survey page  */
@@ -185,31 +200,27 @@ label > input:checked + img {
 
 
 .question-area-intro{  
+    min-width: 550px;
     border-radius: 10px 0px 0px 10px;
-    background-color: #e74c3c;
-    
+    background-color: #e74c3c;  
 }
 
 .question-area-intro h1 {
     color:white;
-    font-size: 30px;
+    font-size: 40px;
     padding: 20px;
     text-align: left;
-    margin-bottom:140px;
+    margin-bottom:200px;
     
 }
 
 .question-area-speaker-img {
     margin-bottom: -4px;
-    align-self: flex-end;
     max-width: 100%;
-
+    border-bottom-left-radius: 10px;
 }
 
 .question-area {
-    max-width: 1100px;
-    z-index: 1000;
-    margin-left:-30px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
@@ -277,7 +288,6 @@ label > input:checked + img {
 
 
 .reset {
-    
     background: #e74c3c;
     color: white;
     border-radius: 5px;
@@ -319,6 +329,16 @@ footer {
     display: flex;
     flex-direction:column;
     width: 100%;
+    }
+
+    .question-area-intro{
+        min-width: 100px;
+        max-height: 280px;
+        border-radius: 10px;
+    }
+    .question-area-intro h1 {
+       margin-right: 40px;
+
     }
 }
 @media screen and (max-width: 600px) {
