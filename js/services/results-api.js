@@ -8,27 +8,27 @@ let results = [
         label: 'Personal Freedom',
         key: 'personalFreedom',
         text: [
-            'you have basically no personal freedom',
-            'you have a bit of personal freedom',
-            'you are doing okay in terms of personal freedom',
-            'you have lots of personal freedom',
-            'YOU HAVE TOO MUCH PERSONAL FREEDOM'
+            'Personal freedom is nonexistent, everyone is in jail.',
+            'Personal freedom is very low, marshall law reigns over the population.',
+            'Personal freedom is satisfactory, however nightly curfews continue to strain political approval.',
+            'Personal freedom is good, the population seems to be at ease.',
+            'YOU HAVE TOO MUCH PERSONAL FREEDOM! THE PRIME MINISTER HAS BEEN DECAPITATED AND THEY ARE DANCING NAKED IN THE STREETS!'
         ]
     },
     { label: 'Economic Freedom',
         key: 'economicFreedom',
         text: [
-            'you have basically no Economic Freedom',
-            'you have a bit of Economic Freedom',
-            'you are doing okay in terms of Economic Freedom',
-            'you have lots of Economic Freedom',
-            'YOU HAVE TOO MUCH Economic Freedom'
+            'There is absolutely no economic freedom. The nation\'s coffers are filled with exotic riches, however, the population has been living in abject poverty for nearly a decade. Rebels have taken over three major cities and continue to recruit with the promise of economic prosperity.',
+            'Economic freedom is low, the facade of Communist policies has not fooled the population. Marshall law has been declared until protests die down.',
+            'Economic policies are currently being protested due to the lack of inclusion. The wealth gap continues to cause political uproars across the nation.',
+            'The Economy is booming! Industrial development is at an all time high, however the monopolization of commodities has lead to 95% of the country relying on major corporations for their services.',
+            'WE SHOULD\'NT HAVE LISTENED TO SENATOR BERNIE SANDERS ... WE SHOULD\'NT HAVE LISTENED!!!!'
         ]
     },
     { label: 'Political Freedom',
         key: 'politicalFreedom',
         text: [
-            'you have basically no Political Freedom',
+            'The world watched in horror as your political rival was executed on national broadcast yesterday. It has sent a firm message that other political regimes will not be tolerated.',
             'you have a bit of Political Freedom',
             'you are doing okay in terms of Political Freedom',
             'you have lots of Political Freedom',
