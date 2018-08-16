@@ -15,12 +15,11 @@ let template = function(nation) {
     <header></header>
     <main>
         
-        <section class="question-area">
         <div class="question-area-title">
-            <h1>All hail ${nation.leaderName}! Do you got what it takes? </h1>
-        <img class="speaker-img" src="../assets/littleman.png">
+            <img class="speaker-img" src="../../assets/littleman.png">
+            <h1>All hail ${nation.leaderName}! Do you have what it takes? </h1>
         </div>
-        </section>
+        <section class="question-area"></section>
     
     </main>
     <footer></footer>
