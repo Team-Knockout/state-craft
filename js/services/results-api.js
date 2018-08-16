@@ -22,7 +22,7 @@ let results = [
             'Economic freedom is low, the facade of Communist policies has not fooled the population. Marshall law has been declared until protests die down.',
             'Economic policies are currently being protested due to the lack of inclusion. The wealth gap continues to cause political uproars across the nation.',
             'The Economy is booming! Industrial development is at an all time high, however the monopolization of commodities has lead to 95% of the country relying on major corporations for their services.',
-            'WE SHOULD\'NT HAVE LISTENED TO SENATOR BERNIE SANDERS ... WE SHOULD\'NT HAVE LISTENED!!!!'
+            'WE SHOULDN\'T HAVE LISTENED TO SENATOR BERNIE SANDERS ... WE SHOULDN\'T HAVE LISTENED!!!!'
         ]
     },
     { label: 'Political Freedom',
@@ -61,11 +61,11 @@ let results = [
         label:'Economic Production',
         key: 'econProduction',
         text: [
-            'you have basically no Economic Production',
-            'you have a bit of Economic Production',
-            'you are doing okay in terms of Economic Production',
-            'you have lots of Economic Production',
-            'YOU HAVE TOO MUCH Economic Production'
+            'The ports of this nation haven\'t exported a single item of worth. As a nation we cannot continue on only exporting grass. EVERYONE HAS GRASS!',
+            'Economic production is at an all time low, our manufactories have come to a standstill! It will be unsustainable to keep the current working conditions.',
+            'Production could be higher. Last month the nations GDP dropped three points due to the trade war with China.',
+            'An increase in GDP over the last three years has pushed the country into its first renaissance!',
+            'The nation is in crisis! Without the ability to deal with our surplus we will quickly shift towards an economic spiral. We all remember twenty years ago. Lets not go back to that.'
         ]
     },
     {
