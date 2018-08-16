@@ -34,7 +34,10 @@ p {
 
 
 main {
-
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 40px;
     display: flex;
     justify-content: center;    
 }

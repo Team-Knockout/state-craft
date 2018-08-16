@@ -3,6 +3,7 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
+import TypeInfo from '../components/type-info.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
 
@@ -12,7 +13,6 @@ import nationApi from '../services/nation-api.js';
 let template = function() {
     return html`
     <header></header>
-
     <section class="results-title">
         <h1>So how did you do?</h1>
         <h3> the results are in.</h3>
@@ -24,12 +24,12 @@ let template = function() {
                     <img class="results-image" src="/assets/little-man-results.jpg">
                 </section>
                 <section class="results"> </section>    
+                <section class="type-info"></section>
             </div>
         </main>
-
-            <section class="reset-button">
-                <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
-            </section>
+        <section class="reset-button">
+            <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
+        </section>
             
     <footer></footer>
         
@@ -97,6 +97,13 @@ export default class App{
             }
         }
  
+        let typeArea = dom.querySelector('.type-info');
+        let typeInfo = new TypeInfo({
+            nation: this.nation
+        });
+        typeArea.appendChild(typeInfo.render());
+
+
         let keyArray = [];
         let valueArray = [];
         let indexArray = [];
