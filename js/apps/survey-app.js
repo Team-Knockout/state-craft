@@ -17,8 +17,7 @@ let template = function(nation) {
                 <img class="question-area-speaker-img" src="assets/littleman.png">
             </div>
             <section class="question-area"></section>
-        </section>
-    
+        </section>    
     </main>
     <footer></footer>
    `;
