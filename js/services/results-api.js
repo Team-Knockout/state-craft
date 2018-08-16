@@ -104,9 +104,10 @@ let results = [
 ];
 
 let philosophy = {
-
+    
 }
 
 export default {
     getResults: () => results,
+    getPhilosophy: () => philosophy,
 };
