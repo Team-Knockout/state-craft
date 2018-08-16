@@ -29,21 +29,21 @@ let results = [
         key: 'politicalFreedom',
         text: [
             'The world watched in horror as your political rival was executed on national broadcast yesterday. It has sent a firm message that other political regimes will not be tolerated.',
-            'you have a bit of Political Freedom',
-            'you are doing okay in terms of Political Freedom',
-            'you have lots of Political Freedom',
-            'YOU HAVE TOO MUCH Political Freedom'
+            'The current authoritarian regime stands strong despite political upheaval from the "Please dont kill us too" socialist party.',
+            'Ruling has been smooth sailing, the transition towards elected local officials has lead to four homicides. Also two goats and one adorable corgi dressed as a sailor have been nominated for office in districts 13, 7, and 4.',
+            'Hooray, welcome to Democracy! Where everyone has the right to make an ass of themselves',
+            'Political turmoil across the nation as vegans protest the inhumanity of the meat industry on every major highway in the nation. This has brought transportation to a standstill and has lead to 342 hit and runs. The national guard has been deployed to handle the situation, however, armed with only words of disapproval little has been done to contain the vegan uprising.'
         ]
     },
     {
         label: 'Approval',
         key: 'approval',
         text: [
-            'you have basically no Approval',
-            'you have a bit of Approval',
-            'you are doing okay in terms of Approval',
-            'you have lots of Approval',
-            'YOU HAVE TOO MUCH Approval'
+            'Approval of current political office has hit an all time low of 36%. Perhaps painting yourself orange and spewing xenophobic nonsense will lead you to an early political grave.',
+            'Political approval hit a new low this morning. Apparently making comments about immigrants during the midterm election has results in a political shift to the left.',
+            'Decisions in office has lead to the population tolerating your rule. Approval could be higher... lets not forget last week when the middle class found out their taxes were going to fund your golfing addiction.',
+            'Look at you go! Despite the accidental bowel movement during this years State of The Nation your approval rating remains the highest it has ever been. You are trending on twitter.',
+            'EVERYBODY AGREES ON WHATEVER YOU SAY! FOR THE GOOD OF THE NATION PLEASE STOP WITH BANNING PLASTIC STRAWS AND WORK ON GUN REFORM!'
         ]
     },
     {
