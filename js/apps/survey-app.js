@@ -13,13 +13,15 @@ import nationApi from '../services/nation-api.js';
 let template = function(nation) {
     return html`
     <header></header>
-    <main>
-        
-        <div class="question-area-title">
-            <img class="speaker-img" src="../../assets/littleman.png">
-            <h1>All hail ${nation.leaderName}! Do you have what it takes? </h1>
-        </div>
-        <section class="question-area"></section>
+    <main class="question-page">
+        <section class="question-area-flex-container">
+            <div class="question-area-intro">
+               
+                <h1>All hail ${nation.leaderName}! Do you have what it takes? </h1>
+                <img class="question-area-speaker-img" src="../../assets/littleman.png">
+            </div>
+            <section class="question-area"></section>
+        </section>
     
     </main>
     <footer></footer>

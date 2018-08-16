@@ -5,15 +5,12 @@
     font-weight: 300;
     /* border: 1px red solid;  */
 }
-body {
-    background-image: url("../assets/background.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+.home-page {
+   background: #2c3e50
 }
 
 main {
-
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -44,6 +41,7 @@ h4 {
 p {
     font-size: 18px;
 }
+
 
 main {
     background-image: url("assets/backround.jpg");
@@ -163,34 +161,49 @@ label > input:checked + img {
 
 /* survey page  */
 
-.question-area {
+.question-page {
+    background: #fcfafa;
+}
+
+.question-area-flex-container {
     display: flex;
-    padding:10px;
+    padding:20px;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0;
+
+}
+
+.question-area-intro{  
+    color:white;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #e74c3c;
+    
+}
+
+.question-area-intro h1 {
+    font-size: 30px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom:140px;
+    
+}
+
+.question-area-speaker-img {
+    margin-bottom: -4px;
+    align-self: flex-end;
+    max-width: 100%;
+
+}
+
+.question-area {
+    max-width: 1100px;
+    z-index: 1000;
+    margin-left:-30px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-    height: 100%;
-    margin: 0;
 }
-
-
-.question-area-title
-{   order:0;
-    /* width:500px; */
-    flex-grow: 2;
-    text-align: left;
-    color:white;
-    background-color: #e74c3c;
-}
-
-.question-area-title h1 {
-    padding: 30px;
-    text-align: center;
-}
-.speaker-img {
-    max-width: 720px;
-}
-
 .highlight {
     color: #2c3e50;
     background: #96dde6;
@@ -202,6 +215,7 @@ label > input:checked + img {
 
 .question-box {
     padding:20px;
+ 
 }
 
 .answer {
