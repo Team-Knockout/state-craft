@@ -83,22 +83,22 @@ let results = [
         label:'Safety',
         key: 'safety',
         text: [
-            'you have basically no Safety',
-            'you have a bit of Safety',
-            'you are doing okay in terms of Safety',
-            'you have lots of Safety',
-            'YOU HAVE TOO MUCH Safety'
+            'There is a growing problem of people going missing, partly due the human trafficking gangs that have successfully infiltrated the police forces and control the nation from within.',
+            'The most popular pastimes for your citizens involve high speed and little protection. Thankfully they\'re tough, because you run the rest of your nation like the Wild West too.',
+            'You have a law that requires seatbelts, but you also require that people drive long distances everyday because you haven\'t invested in public transportation. The irony is thick.',
+            'People may not be excited to say they are from your great nation, but suburban moms in neighboring countries are checking your housing prices and walkability scores incessantly because your nation consistently ranks one of the safest in the world.',
+            'Your nation hasn\'t had a workplace injury in 5 years. Maybe it is the bubblewrap that every citizen is required to wear that led that.'
         ]
     },
     {
         label:'Environment',
         key: 'environment',
         text: [
-            'you have basically no Environment',
-            'you have a bit of Environment',
-            'you are doing okay in terms of Environment',
-            'you have lots of Environment',
-            'YOU HAVE TOO MUCH Environment'
+            'China looks like a beach in paradise compared to the disgusting monstrosity that is your nation. A tear flows down an aboriginal\'s face, as he witnesses the destruction of everything good in his world.',
+            'Is it global warming or global cooling? People aren\'t really sure, thanks to fake news outlets. Corporations capitalize on the apathy by using cheap production techniques that dirty local rivers. Business as usual.',
+            'People are aware of global warming, but it\'s a long way off, right? Nothing has really changed in your nation, as peak oil looms on the horizon.',
+            'The world is an amazing place, thanks to your nation. You\'ve spearheaded efforts with the UN to pass strict cap-and-trade policies to eliminate fossil fuels within the next 40 years.',
+            'The environmentalists have won. People live until 150, wild bears come up to hikers for pets, and the only smog people know of is from movies.'
         ]
     }
 ];
