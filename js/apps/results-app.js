@@ -3,6 +3,7 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
+import TypeInfo from '../components/type-info.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
 
@@ -15,6 +16,8 @@ let template = function() {
         <main class="results-main"" >
             <section class="results">
                 <h2>Here are your results</h2>
+            </section>
+            <section class="type-info">
             </section>
             <section class="reset-button">
                 <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
@@ -86,6 +89,13 @@ export default class App{
             }
         }
  
+        let typeArea = dom.querySelector('.type-info');
+        let typeInfo = new TypeInfo({
+            nation: this.nation
+        });
+        typeArea.appendChild(typeInfo.render());
+
+
         let keyArray = [];
         let valueArray = [];
         let indexArray = [];

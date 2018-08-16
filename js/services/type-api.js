@@ -162,7 +162,7 @@ export default {
         
         nation.govType = govType[typeKey].name;
         nation.govOverview = govType[typeKey].overview;
-        nation.details = govType[typeKey].details;
+        nation.govDetails = govType[typeKey].details;
     }
 };
 
