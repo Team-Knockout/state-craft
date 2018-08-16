@@ -21,11 +21,11 @@ let template = function() {
         <main>
             <div class="flex-container">
                 <section class="results-intro-area">
-                    <img class="results-image" src="/assets/little-man-results.jpg">
+                    <img class="results-image" src="assets/little-man-results.jpg">
                 </section>
                 <section class="results"> </section>    
-                <section class="type-info"></section>
             </div>
+            <section class="type-info"></section>
         </main>
         <section class="reset-button">
             <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
