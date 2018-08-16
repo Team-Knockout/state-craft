@@ -8,7 +8,10 @@ import Footer from '../layout/footer.js';
 
 import QuestionBox from '../components/question-box.js';
 import questionApi from '../services/question-api.js';
+
 import nationApi from '../services/nation-api.js';
+import typeApi from '../services/type-api.js';
+
 
 let template = function(nation) {
     return html`
@@ -30,6 +33,8 @@ export default class App {
     constructor() {
         this.questions = questionApi.getAll();
         this.nation = nationApi.get();
+        this.setType = typeApi.set();
+        this.getType = typeApi.get();
     }
 
     render() {
