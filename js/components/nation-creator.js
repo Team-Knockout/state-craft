@@ -2,7 +2,6 @@
 //* flag
 
 import html from '../libs/html.js';
-
 import nationApi from '../services/nation-api.js';
 
 
