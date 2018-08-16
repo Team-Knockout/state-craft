@@ -5,6 +5,19 @@
     font-weight: 300;
     /* border: 1px red solid;  */
 }
+body {
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
 
 /* fonts */
 
@@ -229,6 +242,7 @@ label > input:checked + img {
 
 .result-box {
     border: 1px solid #aaaa;
+    background-color: white;
     border-radius: 8px;
     cursor: pointer;
     padding: 15px;

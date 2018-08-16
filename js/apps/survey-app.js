@@ -7,7 +7,7 @@ import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 
 import QuestionBox from '../components/question-box.js';
-// import questionApi from '../services/question-api.js';
+import questionApi from '../services/question-api.js';
 import nationApi from '../services/nation-api.js';
 
 let template = function(nation) {
@@ -29,7 +29,7 @@ let template = function(nation) {
 
 export default class App {
     constructor() {
-        // this.questions = questionApi.getAll();
+        this.questions = questionApi.getAll();
         this.nation = nationApi.get();
     }
 
@@ -49,6 +49,9 @@ export default class App {
         let questionArea = dom.querySelector('.question-area');
         let questionAreaTitle = dom.querySelector('.question-area-title');
         let questionBox = new QuestionBox({
+            nation: this.nation,
+            questions: this.questions,
+
             reRenderQuestionBox: (nation, location) => {
                 while(questionArea.lastElementChild){
                     questionArea.lastElementChild.remove();
