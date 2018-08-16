@@ -6,7 +6,6 @@
     /* border: 1px red solid;  */
 }
 
-
 /* fonts */
 
 h1 {
@@ -37,7 +36,6 @@ p {
 main {
 
     display: flex;
-    flex-direction: row;
     justify-content: center;    
 }
 
@@ -256,33 +254,29 @@ label > input:checked + img {
 
 /* Results*/
 
-.results-main  {
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
+
 
 .results {
-
-    max-width: 800px;
+    
 }
 
 .results h2 {
     text-align: center;
 }
 
+.results-image {
+    margin-bottom: -4px;
+
+    width: 500px;
+}
+
+.results-title {
+    text-align: center;
+
+}
+
 .result-box {
-    border: 1px solid #aaaa;
-    background-color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 15px;
-    margin: 20px;
-    border-left: solid 10px #e74c3c;
+   
 
 }
 

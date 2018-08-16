@@ -12,14 +12,25 @@ import nationApi from '../services/nation-api.js';
 let template = function() {
     return html`
     <header></header>
-        <main class="results-main"" >
-            <section class="results">
-                <h2>Here are your results</h2>
-            </section>
+
+    <section class="results-title">
+        <h1>So how did you do?</h1>
+        <h3> the results are in.</h3>
+    </section>
+
+        <main>
+            <div class="flex-container">
+                <section class="results-intro-area">
+                    <img class="results-image" src="/assets/little-man-results.jpg">
+                </section>
+                <section class="results"> </section>    
+            </div>
+        </main>
+
             <section class="reset-button">
                 <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
             </section>
-        </main>
+            
     <footer></footer>
         
    `;
