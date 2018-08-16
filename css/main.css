@@ -16,13 +16,14 @@ main {
     padding: 40px;
     display: flex;
     justify-content: center;
+    align-items:baseline;
   
 }
 
 /* fonts */
 
 h1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 h2 {
@@ -173,10 +174,17 @@ label > input:checked + img {
 
 .question-area-title
 {
-    padding: 20px;
-    text-align: center;
+    text-align: left;
     color:white;
     background-color: #e74c3c;
+}
+
+.question-area-title h1 {
+    padding: 30px;
+    text-align: center;
+}
+.speaker-img {
+    max-width: 750px;
 }
 
 .question-area-title p {
@@ -184,9 +192,6 @@ label > input:checked + img {
     margin-top:-20px
 }
 
-.question-box {
-    background-color: rgb(13, 255, 215);
-}
 
 .answer {
     background-color: #fcfafa;

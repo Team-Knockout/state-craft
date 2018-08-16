@@ -15,8 +15,8 @@ let template = function() {
     <header></header>
     <main>
         <div class="question-area-title">
-            <h1>What Kind Of Nation Will You ___?</h1>
-            <p>Answer the series of questions below to find out. </p>
+            <h1>What Kind Of Nation Will You Run?</h1>
+        <img class="speaker-img" src="../assets/littleman.png">
         </div>
         <section class="question-area"></section>
         <section class="nation-display"></section>
