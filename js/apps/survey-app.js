@@ -33,8 +33,8 @@ export default class App {
     constructor() {
         this.questions = questionApi.getAll();
         this.nation = nationApi.get();
-        this.setType = typeApi.set();
-        this.getType = typeApi.get();
+        this.setType = typeApi.set;
+        this.getTypes = typeApi.get;
     }
 
     render() {
@@ -55,6 +55,8 @@ export default class App {
         let questionBox = new QuestionBox({
             nation: this.nation,
             questions: this.questions,
+            setType: this.setType,
+            getTypes: this.getTypes,
 
             reRenderQuestionBox: (nation, location) => {
                 while(questionArea.lastElementChild){

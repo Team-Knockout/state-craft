@@ -24,6 +24,8 @@ export default class QuestionBox{
         this.question = props.question;
         this.reRenderQuestionBox = props.reRenderQuestionBox;
         this.questionArea = props.questionArea;
+        this.setType = props.setType;
+        this.getTypes = props.getTypes;
     }
 
     render() {
@@ -47,6 +49,10 @@ export default class QuestionBox{
                 handleAnswer: (selectedIndex) => {
 
                     this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
+    
+                    this.setType(this.nation);
+
+                    console.log(this.nation);
                     this.nation.question++;
                     
                     if(this.nation.question >= 10) {

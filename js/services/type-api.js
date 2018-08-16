@@ -143,7 +143,23 @@ let govType = {
 export default {
     get: () => govType,
     set: (nation) => {
-        let typeKey = `${nation.economicFreedom},${nation.personalFreedom}.${nation.politicalFreedom}`;
+        let vals = [nation.economicFreedom, nation.personalFreedom, nation.politicalFreedom];
+        let keys = [];
+        
+        for(let i = 0; i < vals.length; i++){
+            if(vals[i] < 1.67){
+                keys.push(0);
+            }
+            else if(vals[i] > 3.34) {
+                keys.push(2);
+            }
+            else {
+                keys.push(1);
+            }
+
+        }
+
+        let typeKey = `${keys.economicFreedom},${keys.personalFreedom}.${keys.politicalFreedom}`;
         nation.govType = typeKey;
     }
 };
