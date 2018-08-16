@@ -13,7 +13,7 @@ In Statecraft, the fate of your nation lies in your hands. Will you be proud of 
 
 ## Improvement Goals
 
-* add "pick a national anthem" to initial screen
+* add "pick a national anthem" to initial screen and play song (on repeat, of course) on game page and results page
 * add Travis as a component in the lower right, who returns a response and acts like Clippy from old Microsoft Word
   * 'You did not pass Travis!'
 * we need more questions and results.
