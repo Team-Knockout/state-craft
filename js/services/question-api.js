@@ -13,7 +13,7 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom += 0.8;
                 nation.politicalFreedom += 0.3;
-                nation.approval += 0.1,
+                nation.approval += 0.4;
                 nation.health += 0.1;
                 nation.safety += 0.2;
             }
@@ -33,6 +33,7 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom += 2.0;
                 nation.politicalFreedom -= 2.1;
+                nation.approval -= 0.6;
             }
         }] 
     },
@@ -45,7 +46,8 @@ let questions = [
                 nation.personalFreedom -= 0.8;
                 nation.population += 2.0;
                 nation.econProduction += 0.4;
-                nation.health -= 0.1;
+                nation.health -= 0.3;
+                nation.approval -= 0.2;
             }
         },
         {
@@ -81,7 +83,7 @@ let questions = [
                 nation.econProduction -= 0.7;
                 nation.health += 0.7;
                 nation.safety += 0.7;
-                nation.environment += 3.1;
+                nation.environment += 2.0;
             }
         },
         {
@@ -96,11 +98,12 @@ let questions = [
         {
             answer: 'The Automotive Manufacturers Association, meanwhile, has called for government support. "It\'s clear that we need to boost the level of automobile support in this country.This protest this morning is a clear indication of...um...anyway, we need more government funds."',
             effects: (nation) => {
-                nation.economicFreedom -= 0.3;
-                nation.econProduction += 0.5;
+                nation.economicFreedom -= 0.4;
+                nation.econProduction += 0.8;
                 nation.health -= 0.5;
                 nation.safety -= 0.3;
                 nation.environment -= 1.1;
+                nation.approval -= 0.1;
             }
         }]
     },
@@ -152,6 +155,7 @@ let questions = [
                 nation.health -= 0.2;
                 nation.safety -= 0.2;
                 nation.environment -= 1.1;
+                nation.approval += 0.3;
             }
         }]
     },
@@ -261,6 +265,7 @@ let questions = [
                 nation.economicFreedom -= 0.2;
                 nation.econProduction -= 0.4;
                 nation.environment += 0.3;
+                nation.approval -= 0.1;
             }
         }]
     },

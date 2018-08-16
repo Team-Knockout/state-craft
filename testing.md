@@ -148,3 +148,18 @@ politicalFreedom : 2.2
 population : 3.3000000000000007 
 question : 10 
 safety : 1.8
+##Test 11
+approval : 2.5 
+econProduction : 1.7000000000000002 
+economicFreedom : 2.2500000000000004 
+environment : 5.6000000000000005 
+health : 3.7999999999999994 
+leaderName : "Robin of Locksley" 
+nationFlag : "assets/flag1.png" 
+nationMotto : "Not all paradise has been lost" 
+nationName : "Paradise" 
+personalFreedom : 4.3 
+politicalFreedom : 0.09999999999999992 
+population : 2.1 
+question : 10 
+safety : 1.8999999999999997
