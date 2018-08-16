@@ -5,8 +5,15 @@ import Question from './question.js';
 
 let template = function() {
     return html`
+        <div class="question-box">
+
+            <span class="highlight"> The question your faced with... </span>
         <div class="question-text"></div>
+
+            <span class="highlight"> your choices </span>
         <div class="answer-list"></div>
+            
+        </div>
    `;
 };
 
