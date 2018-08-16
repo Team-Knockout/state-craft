@@ -1,23 +1,26 @@
 import html from '../libs/html.js';
-import questionApi from '../services/question-api.js';
-
 import Answer from './answer.js';
-
-import nationApi from '../services/nation-api.js';
 import Question from './question.js';
 
 
 let template = function() {
     return html`
+        <div class="question-box">
+
+            <span class="highlight"> The question your faced with... </span>
         <div class="question-text"></div>
+
+            <span class="highlight"> your choices </span>
         <div class="answer-list"></div>
+            
+        </div>
    `;
 };
 
 export default class QuestionBox{
     constructor(props) {
-        this.questions = questionApi.getAll();
-        this.nation = nationApi.get();
+        this.questions = props.questions;
+        this.nation = props.nation;
         this.question = props.question;
         this.reRenderQuestionBox = props.reRenderQuestionBox;
         this.questionArea = props.questionArea;

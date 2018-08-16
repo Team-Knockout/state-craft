@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
 * {
@@ -7,7 +5,6 @@
     font-weight: 300;
     /* border: 1px red solid;  */
 }
-
 body {
     background-image: url("../assets/background.jpg");
     background-attachment: fixed;
@@ -20,13 +17,12 @@ main {
     padding: 40px;
     display: flex;
     justify-content: center;
-  
 }
 
 /* fonts */
 
 h1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 h2 {
@@ -47,9 +43,17 @@ h4 {
 
 p {
     font-size: 18px;
-
 }
 
+main {
+    background-image: url("assets/backround.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
 
 /* navigation and header */
 .menu-content {
@@ -71,7 +75,8 @@ p {
 }
     
 .menu-nav {
-    display: flex;
+
+    margin-left: 50px;
 }
 
 .avatar {
@@ -120,10 +125,9 @@ form p {
     border-radius: 5px;
     border: solid 1px #eee;
     height: 30px;
-    width: 300px;
+    width: 100%;
     margin-top: 7px;
     margin-bottom: 20px;
-
 
 }
 
@@ -135,7 +139,6 @@ label > input {
 label > input + img {
     cursor: pointer;
     border: 2px solid transparent;
-
 }
 
 label > input:checked + img {
@@ -151,7 +154,6 @@ label > input:checked + img {
     margin-top: 20px;
     padding: 10px;
     width:320px;
-
 }
 
 .flag-image {
@@ -160,36 +162,46 @@ label > input:checked + img {
 }
 
 /* survey page  */
+
 .question-area {
-    padding:40px;
+    display: flex;
+    padding:10px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     height: 100%;
     margin: 0;
-    max-width: 800px;
 }
-
-/* .question-box {
-    background-color: rgb(13, 255, 215);
-}*/
 
 
 .question-area-title
-{
-    padding: 20px;
-    text-align: center;
+{   order:0;
+    /* width:500px; */
+    flex-grow: 2;
+    text-align: left;
     color:white;
     background-color: #e74c3c;
 }
 
-.question-area-title p {
-    font-size: 22px;
-    margin-top:-20px
+.question-area-title h1 {
+    padding: 30px;
+    text-align: center;
+}
+.speaker-img {
+    max-width: 720px;
+}
+
+.highlight {
+    color: #2c3e50;
+    background: #96dde6;
+    padding: 7px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .question-box {
-    background-color: rgb(13, 255, 215);
+    padding:20px;
 }
 
 .answer {
@@ -199,6 +211,7 @@ label > input:checked + img {
     padding: 20px;
     border-radius: 10px;
 }
+
 .answer:hover {
     background-color:#2c3e50;
     color: white;

@@ -7,19 +7,21 @@ import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 
 import QuestionBox from '../components/question-box.js';
-// import questionApi from '../services/question-api.js';
+import questionApi from '../services/question-api.js';
 import nationApi from '../services/nation-api.js';
 
-let template = function() {
+let template = function(nation) {
     return html`
     <header></header>
     <main>
+        
+        <section class="question-area">
         <div class="question-area-title">
-            <h1>What Kind Of Nation Will You ___?</h1>
-            <p>Answer the series of questions below to find out. </p>
+            <h1>All hail ${nation.leaderName}! Do you got what it takes? </h1>
+        <img class="speaker-img" src="../assets/littleman.png">
         </div>
-        <section class="question-area"></section>
-        <section class="nation-display"></section>
+        </section>
+    
     </main>
     <footer></footer>
    `;
@@ -27,13 +29,13 @@ let template = function() {
 
 export default class App {
     constructor() {
-        // this.questions = questionApi.getAll();
+        this.questions = questionApi.getAll();
         this.nation = nationApi.get();
     }
 
     render() {
 
-        let dom = template();
+        let dom = template(this.nation);
 
         let head = dom.querySelector('header');
         let foot = dom.querySelector('footer');
@@ -47,6 +49,9 @@ export default class App {
         let questionArea = dom.querySelector('.question-area');
         let questionAreaTitle = dom.querySelector('.question-area-title');
         let questionBox = new QuestionBox({
+            nation: this.nation,
+            questions: this.questions,
+
             reRenderQuestionBox: (nation, location) => {
                 while(questionArea.lastElementChild){
                     questionArea.lastElementChild.remove();

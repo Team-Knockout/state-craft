@@ -5,7 +5,6 @@ let template = function(nation) {
     return html`
     <nav>
         <div class="menu-content">
-        <p></p>
              <div class="menu-nav">
                 <a href="index.html">Home</a>
                 <a href="survey.html">Play Game</a>
