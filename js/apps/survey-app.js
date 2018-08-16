@@ -49,7 +49,7 @@ export default class App {
         foot.appendChild(footer.render());
 
         let questionArea = dom.querySelector('.question-area');
-        let questionAreaTitle = dom.querySelector('.question-area-title');
+        let questionAreaIntro = dom.querySelector('.question-area-intro');
         let questionBox = new QuestionBox({
             nation: this.nation,
             questions: this.questions,
@@ -82,10 +82,10 @@ export default class App {
                 location.appendChild(questionBox.render());
             }
             else {
-                while(questionAreaTitle.lastChild){
-                    questionAreaTitle.lastChild.remove();
+                while(questionAreaIntro.lastChild){
+                    questionAreaIntro.lastChild.remove();
                 }
-                questionAreaTitle.setAttribute('style', 'display:none;');
+                questionAreaIntro.setAttribute('style', 'display:none;');
                 location.appendChild(warning());
             }
         }
