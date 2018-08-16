@@ -28,7 +28,7 @@ let template = function() {
 export default class App{
     constructor() {
         this.text = resultsApi.get()[0]['text'][0];
-        this.nation = nationApi.get();
+        this.nation = nationApi.getResults();
     }
 
     render() {
@@ -51,8 +51,8 @@ export default class App{
         });
         
         function getResultsKeys(arrayOut) {
-            for(let i = 0; i < resultsApi.get().length; i++) {
-                let x = resultsApi.get()[i]['key'];
+            for(let i = 0; i < resultsApi.getResults().length; i++) {
+                let x = resultsApi.getResults()[i]['key'];
                 arrayOut.push(x);
             }
         }
@@ -76,8 +76,8 @@ export default class App{
             }
         }
         function renderResults(arrayIn){
-            for(let i = 0; i < resultsApi.get().length; i++){
-                let textArray = resultsApi.get()[i]['text'];
+            for(let i = 0; i < resultsApi.getResults().length; i++){
+                let textArray = resultsApi.getResults()[i]['text'];
                 let correctIndex = arrayIn[i];
                 let result = new Result ({
                     text: textArray[correctIndex],

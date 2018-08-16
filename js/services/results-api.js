@@ -103,6 +103,10 @@ let results = [
     }
 ];
 
+let philosophy = {
+
+}
+
 export default {
-    get: () => results,
+    getResults: () => results,
 };
