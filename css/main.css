@@ -304,3 +304,17 @@ footer {
     flex-direction: row;
     }
 }
+@media screen and (max-width: 480px) {
+    .question-area-flex-container {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .question-area-flex-container {
+    display: flex;
+    flex-direction:column;
+    width:100%;
+    }
+}
