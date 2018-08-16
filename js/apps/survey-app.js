@@ -14,7 +14,7 @@ let template = function(nation) {
         <section class="flex-container">
             <div class="question-area-intro"> 
                 <h1>All hail ${nation.leaderName}! Do you have what it takes? </h1>
-                <img class="question-area-speaker-img" src="../../assets/littleman.png">
+                <img class="question-area-speaker-img" src="assets/littleman.png">
             </div>
             <section class="question-area"></section>
         </section>
