@@ -50,11 +50,11 @@ let results = [
         label:'Population',
         key: 'population',
         text: [
-            'you have basically no Population',
-            'you have a bit of Population',
-            'you are doing okay in terms of Population',
-            'you have lots of Population',
-            'YOU HAVE TOO MUCH Population'
+            'The hypothetical dream of every middle school boy\'s has finally been realized: they must find a girl and repopulate the Earth (or at least your nation). Unforunately, all the dead bodies are hard to sort through, making it a lot less romantic than they anticipated.',
+            'The birth rate in your nation has been dropping precipitously of late. Your industries have an aging, but productive workforce — for now.',
+            'People hold the ideal of 2 kids and a dog sacred. The population is very stable, almost too stable. Movies about heroic soccer moms are incredibly popular.',
+            'The population of your nation is a growing concern, literally. You recall a book you read back in college by Thomas Malthus. A bead of sweat drips down your forehead. You wip it off and go home to your family of 15.',
+            'The hottest startup business in your nation is a home delivery service for diapers. Many households have stay at home moms and stay at home dads. Fertility gods and goddesses are some of the most common mascots for high school sports teams.',
         ]
     },
     {
@@ -72,11 +72,11 @@ let results = [
         label:'Health',
         key:'health',
         text: [
-            'you have basically no Health',
-            'you have a bit of Health',
-            'you are doing okay in terms of Health',
-            'you have lots of Health',
-            'YOU HAVE TOO MUCH Health'
+            'You should\'ve kept to Michelle Obama\'s school lunch program. Now fat people roam your streets, cannibalizing each other and causing pot holes due to all of the stress on the roads.',
+            'Rub some dirt on it. That\'s literally what my oncologist told me when I went in to have a malignant tumor removed.',
+            'You don\'t have universal healthcare or anything, but people generally have what they need.',
+            'Healthiness is happiness, so your citizens say. Culinary and fitness videos consistently top the charts of your nation\'s video streaming services.',
+            'Women in your nation are world famous for their incredible beauty. Men are sought after by tourists who flock to your beaches, to get a glimpse of peak physical specimens. Nobody really works, but tourism dollars flow in by the ton.'
         ]
     },
     {
@@ -94,7 +94,7 @@ let results = [
         label:'Environment',
         key: 'environment',
         text: [
-            'China looks like a beach in paradise compared to the disgusting monstrosity that is your nation. A tear flows down an aboriginal\'s face, as he witnesses the destruction of everything good in his world.',
+            'China looks like a beach in paradise compared to the disgusting monstrosity that is your nation. You \'water\' your plants with Brawndo, and nothing grows. Is it really any wonder?',
             'Is it global warming or global cooling? People aren\'t really sure, thanks to fake news outlets. Corporations capitalize on the apathy by using cheap production techniques that dirty local rivers. Business as usual.',
             'People are aware of global warming, but it\'s a long way off, right? Nothing has really changed in your nation, as peak oil looms on the horizon.',
             'The world is an amazing place, thanks to your nation. You\'ve spearheaded efforts with the UN to pass strict cap-and-trade policies to eliminate fossil fuels within the next 40 years.',
