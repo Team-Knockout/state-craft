@@ -16,7 +16,7 @@ let template = function(nation) {
     <main>
         
         <div class="question-area-title">
-            <img class="speaker-img" src="../../assets/littleman.png">
+            <img class="speaker-img" src="assets/littleman.png">
             <h1>All hail ${nation.leaderName}! Do you have what it takes? </h1>
         </div>
         <section class="question-area"></section>
