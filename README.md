@@ -1,6 +1,6 @@
-# Statecraft
+**TravisCI:** [![Build Status](https://travis-ci.org/Team-Knockout/state-craft.svg?branch=master)](https://travis-ci.org/Team-Knockout/state-craft)
 
-TravisCI: [![Build Status](https://travis-ci.org/Team-Knockout/state-craft.svg?branch=master)](https://travis-ci.org/Team-Knockout/state-craft)
+# Statecraft 
 
 A fun political simulator
 
