@@ -5,11 +5,15 @@ import Footer from '../layout/footer.js';
 
 import QuestionBox from '../components/question-box.js';
 import questionApi from '../services/question-api.js';
+
 import nationApi from '../services/nation-api.js';
+import typeApi from '../services/type-api.js';
+
 
 let template = function(nation) {
     return html`
     <header></header>
+
     <main class="question-page">
         <section class="flex-container">
             <div class="question-area-intro"> 
@@ -27,6 +31,8 @@ export default class App {
     constructor() {
         this.questions = questionApi.getAll();
         this.nation = nationApi.get();
+        this.setType = typeApi.set;
+        this.getTypes = typeApi.get;
     }
 
     render() {
@@ -47,12 +53,19 @@ export default class App {
         let questionBox = new QuestionBox({
             nation: this.nation,
             questions: this.questions,
+            setType: this.setType,
+            getTypes: this.getTypes,
 
             reRenderQuestionBox: (nation, location) => {
                 while(questionArea.lastElementChild){
                     questionArea.lastElementChild.remove();
                 }
                 renderQuestionBox(nation, location);
+                while(head.lastElementChild) {
+                    head.lastElementChild.remove();
+                    console.log(this.nation);
+                }
+                head.appendChild(header.render());
             },
             questionArea: questionArea,
         });

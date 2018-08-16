@@ -15,6 +15,7 @@ let template = function(nation) {
                     <li><img class="avatar-image" src="${nation.nationFlag}"></li>
                     <li>Name: ${nation.leaderName}</li>
                     <li>Country: ${nation.nationName}</li>
+                    <li>Type: ${nation.govType}</li>
                   
                 </ul>
             </div>
