@@ -6,15 +6,6 @@
     /* border: 1px red solid;  */
 }
 
-.home-page {
-   background: #2c3e50
-}
-
-main {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-}
 
 /* fonts */
 
@@ -44,10 +35,7 @@ p {
 
 
 main {
-    background-image: url("assets/backround.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 40px;
+
     display: flex;
     flex-direction: row;
     justify-content: center;    
@@ -92,15 +80,45 @@ main {
     width: 60px;
 }
 
-/* nation creator page */
+/* home page */
+
+.home-page {
+    background: #2c3e50
+ }
+ 
+.flex-container {
+    display: flex;
+    padding:20px;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0;
+
+}
+
+.homepage-intro-area {
+    color:white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.homepage-intro-area h1 {
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom:200px;
+}
+.welcome-image {
+    margin-bottom: -4px;
+    align-self: flex-end;
+    width: 500px;
+}
 
 .creator-section {
+   
+    margin-left:-30px;
     background: white;
-    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-    height: 100%;
-    max-width: 800px;
 
 }
 
@@ -165,23 +183,15 @@ label > input:checked + img {
     background: #fcfafa;
 }
 
-.question-area-flex-container {
-    display: flex;
-    padding:20px;
-    max-width: 1200px;
-    height: 100%;
-    margin: 0;
-
-}
 
 .question-area-intro{  
-    color:white;
     border-radius: 10px 0px 0px 10px;
     background-color: #e74c3c;
     
 }
 
 .question-area-intro h1 {
+    color:white;
     font-size: 30px;
     padding: 20px;
     text-align: left;
@@ -305,14 +315,14 @@ footer {
     }
 }
 @media screen and (max-width: 480px) {
-    .question-area-flex-container {
+    .flex-container {
     display: flex;
     flex-direction:column;
     width: 100%;
     }
 }
 @media screen and (max-width: 600px) {
-    .question-area-flex-container {
+    .flex-container {
     display: flex;
     flex-direction:column;
     width:100%;
