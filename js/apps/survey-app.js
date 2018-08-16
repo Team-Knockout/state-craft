@@ -17,13 +17,11 @@ let template = function(nation) {
     return html`
     <header></header>
     <main>
-        
         <div class="question-area-title">
             <img class="speaker-img" src="../../assets/littleman.png">
             <h1>All hail ${nation.leaderName}! Do you have what it takes? </h1>
         </div>
         <section class="question-area"></section>
-    
     </main>
     <footer></footer>
    `;
@@ -63,6 +61,11 @@ export default class App {
                     questionArea.lastElementChild.remove();
                 }
                 renderQuestionBox(nation, location);
+                while(head.lastElementChild) {
+                    head.lastElementChild.remove();
+                    console.log(this.nation);
+                }
+                head.appendChild(header.render());
             },
             questionArea: questionArea,
         });

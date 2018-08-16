@@ -49,10 +49,7 @@ export default class QuestionBox{
                 handleAnswer: (selectedIndex) => {
 
                     this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
-    
-                    this.setType(this.nation);
-
-                    console.log(this.nation);
+                    this.setType(this.nation);                    
                     this.nation.question++;
                     
                     if(this.nation.question >= 10) {

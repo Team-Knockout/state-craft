@@ -156,10 +156,14 @@ export default {
             else {
                 keys.push(1);
             }
-
         }
 
-        let typeKey = `${keys.economicFreedom},${keys.personalFreedom}.${keys.politicalFreedom}`;
-        nation.govType = typeKey;
+        let typeKey = `${keys[0]},${keys[1]},${keys[2]}`;
+        
+        nation.govType = govType[typeKey].name;
+        nation.govOverview = govType[typeKey].overview;
+        nation.details = govType[typeKey].details;
     }
 };
+
+
