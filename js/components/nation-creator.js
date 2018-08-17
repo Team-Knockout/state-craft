@@ -17,11 +17,11 @@ let template = function() {
     <section class="creator-section">
         <form onsubmit="window.location='survey.html';">
             <sup>*</sup>Leader Name:<br>
-            <input class="form-input" type="text" name="leaderName" value="Robin of Locksley" required><br>
+            <input class="form-input" type="text" name="leaderName" required><br>
             <sup>*</sup>Nation Name:<br>
-            <input class="form-input"  type="text" name="nationName" value="Paradise" required><br>
+            <input class="form-input"  type="text" name="nationName" required><br>
             <sup>*</sup>National Motto:<br>
-            <input class="form-input" type="text" name="nationMotto" value="Not all paradise has been lost" required><br>
+            <input class="form-input" type="text" name="nationMotto" required><br>
             
             <sup>*</sup>Pick a Flag:<br>
             <section class="homepage-flags">

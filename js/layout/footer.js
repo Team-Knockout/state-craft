@@ -2,7 +2,7 @@ import html from '../libs/html.js';
 
 let template = function() {
     return html`
-        <img class="logo" src="assets/logo.jpg">
+        <img class="logo" src="assets/favicon.png">
         <p>© Statecraft | 2018</p>
    `;
 };
