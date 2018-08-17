@@ -11,7 +11,6 @@ function createNation() {
 
     let data = {
         question: 0,
-        answers: [],
         
         leaderName: '',
         nationName: '',
@@ -27,6 +26,8 @@ function createNation() {
         health: 2.5,
         safety: 2.5, 
         environment: 2.5,
+
+        govType: '',
     };
 
     return data;

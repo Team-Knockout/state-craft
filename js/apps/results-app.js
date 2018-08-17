@@ -3,6 +3,7 @@ import html from '../libs/html.js';
 import Header from '../layout/header.js';
 import Footer from '../layout/footer.js';
 import Result from '../components/result.js';
+import TypeInfo from '../components/type-info.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
 
@@ -12,14 +13,25 @@ import nationApi from '../services/nation-api.js';
 let template = function() {
     return html`
     <header></header>
-        <main class="results-main"" >
-            <section class="results">
-                <h2>Here are your results</h2>
-            </section>
-            <section class="reset-button">
-                <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
-            </section>
+    <section class="results-title">
+        <h1>The results are in.</h1>
+      </section>
+        <main>
+            <div class="flex-container">
+            
+                <section class="results-intro-area">
+                    <img class="results-image" src="assets/little-man-results.jpg">
+                </section>
+                <section class="results">
+                    <section class="type-info"></section>
+                    <section class="results-section"> </section>
+                    <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
+                      
+                </section>    
+            </div>
+            
         </main>
+            
     <footer></footer>
         
    `;
@@ -43,7 +55,7 @@ export default class App{
         head.appendChild(header.render());
         foot.appendChild(footer.render());
 
-        let resultSection = dom.querySelector('.results');
+        let resultSection = dom.querySelector('.results-section');
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
@@ -86,6 +98,13 @@ export default class App{
             }
         }
  
+        let typeArea = dom.querySelector('.type-info');
+        let typeInfo = new TypeInfo({
+            nation: this.nation
+        });
+        typeArea.appendChild(typeInfo.render());
+
+
         let keyArray = [];
         let valueArray = [];
         let indexArray = [];
