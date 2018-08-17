@@ -36,7 +36,7 @@ let questions = [
             answer: '"This raises an interesting issue," says Kala Becerra, your brother. "And that is: why do we need elections, anyway? Seems to me it would be much simpler if you just decided what was right, and did it. Wouldn\'t that save everyone a lot of time?"',
             response: 'Elections have been outlawed.',
             effects: (nation) => {
-                nation.personalFreedom += 2.0;
+                nation.personalFreedom -= 2.0;
                 nation.politicalFreedom -= 2.1;
 
                 if(nation.politicalFreedom < 2) {
