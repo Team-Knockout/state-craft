@@ -1,12 +1,28 @@
 **TravisCI:** [![Build Status](https://travis-ci.org/Team-Knockout/state-craft.svg?branch=master)](https://travis-ci.org/Team-Knockout/state-craft)
 
-# Statecraft 
+# Statecraft
 
 A fun political simulator.
+
+# Table of contents
+
+<!--ts-->
+    * [About](#about)
+    * [Usage](#usage)
+        * [Installation](#installation)
+        * [Gameplay](#gameplay)
+    * [Future Goals](#future-goals)
+<!--te-->
 
 ## About
 
 Statecraft is a simple game with a component architecture written in vanilla JS that copies game theme and flavor text from NationStates.net and apparently our logo from an existing web app also called Statecraft. There is no association with the latter, and we have no plans to distribute this project. It is only practice!
+
+## Usage
+
+### Installation
+
+### Gameplay
 
 ## Future Goals
 
