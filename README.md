@@ -2,7 +2,7 @@
 
 # Statecraft 
 
-A fun political simulator
+A fun political simulator.
 
 ## About
 
