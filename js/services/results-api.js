@@ -31,7 +31,7 @@ let results = [
             'The world watched in horror as your political rival was executed on national broadcast yesterday. It has sent a firm message that other political regimes will not be tolerated.',
             'The current authoritarian regime stands strong despite political upheaval from the "Please dont kill us too" socialist party.',
             'Ruling has been smooth sailing, the transition towards elected local officials has lead to four homicides. Also two goats and one adorable corgi dressed as a sailor have been nominated for office in districts 13, 7, and 4.',
-            'Hooray, welcome to Democracy! Where everyone has the right to make an ass of themselves',
+            'Hooray, welcome to Democracy! Where everyone has the right to make an ass of themselves.',
             'Political turmoil across the nation as vegans protest the inhumanity of the meat industry on every major highway in the nation. This has brought transportation to a standstill and has lead to 342 hit and runs. The national guard has been deployed to handle the situation, however, armed with only words of disapproval little has been done to contain the vegan uprising.'
         ]
     },

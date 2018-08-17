@@ -27,9 +27,7 @@ export default class App {
         foot.appendChild(footer.render());
                 
         let main = dom.querySelector('main');
-        let nationCreator = new NationCreator({
-            test: 'i a prop',
-        });
+        let nationCreator = new NationCreator();
         main.appendChild(nationCreator.render());
 
         return dom;

@@ -3,7 +3,21 @@
 * {
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    /* border: 1px red solid;  */
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+	padding: 0;
+    border: 0;
+    min-height: 100vh;
+}
+
+div#root {
+    min-height: 100vh;
 }
 
 /* fonts */
@@ -32,9 +46,8 @@ p {
     font-size: 18px;
 }
 
-
 main {
-    background: #fcfafa;
+    background: white;
     padding: 40px;
     display: flex;
     justify-content: center;    
@@ -63,8 +76,13 @@ main {
     margin-left: 50px;
 }
 
+.menu-nav a {
+    margin-left: 50px;
+    font-size: 18px;
+}
+
 .avatar {
-    width: 300px;
+    width: 350px;
     background-color: #f1c404;
 } 
 
@@ -83,7 +101,7 @@ main {
 .home-page {
     padding-top: 80px;
     padding-bottom:100px;
-    background: #2c3e50
+    background: #2c3e50;
  }
  
 .flex-container {
@@ -99,7 +117,6 @@ main {
     text-align: center;
     padding:20px;
     max-width: 550px;
-
 }
 
 .homepage-intro-area h1 {
@@ -113,7 +130,6 @@ main {
 .homepage-intro-area h3 {
     color:white;
     font-size: 22px;
-
 }
 
 .homepage-intro-area p {
@@ -160,7 +176,6 @@ form p {
     width: 100%;
     margin-top: 7px;
     margin-bottom: 20px;
-
 }
 
 label > input {
@@ -193,16 +208,21 @@ label > input:checked + img {
     height: 70px;;
 }
 
+.anthem-image {
+    width: 140px;
+    height: 80px;;
+}
+
 /* survey page  */
 
 .question-page {
-    background: #fcfafa;
+    background: white;
 }
 
 
 .question-area-intro{  
     min-width: 550px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
     background-color: #e74c3c;  
 }
 
@@ -212,7 +232,6 @@ label > input:checked + img {
     padding: 20px;
     text-align: left;
     margin-bottom:200px;
-    
 }
 
 .question-area-speaker-img {
@@ -225,6 +244,7 @@ label > input:checked + img {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    padding: 25px;
 }
 .highlight {
     color: #2c3e50;
@@ -257,7 +277,6 @@ label > input:checked + img {
 
 /* Results*/
 
-
 .results {
     background: white;
     border-radius: 10px;
@@ -286,6 +305,7 @@ label > input:checked + img {
     background: #34495e;
     min-height: 190px;
     margin-bottom: 60px;
+    border-radius: 8px;
 }
 
 .type-box p {
@@ -310,7 +330,6 @@ label > input:checked + img {
 
 }
 
-
 .reset {
     background: #e74c3c;
     color: white;
@@ -326,6 +345,10 @@ label > input:checked + img {
 
 .reset-button {
     margin: 0 auto;
+}
+
+.question-area .reset{
+    margin: 40px;
 }
 
 /* footer */
@@ -377,7 +400,6 @@ footer {
 
     .question-area-intro h1 {
        margin-right: 40px;
-
     }
     .results {
         max-width: 300px;
