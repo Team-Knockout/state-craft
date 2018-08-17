@@ -3,7 +3,12 @@
 * {
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    /* border: 1px red solid;  */
+}
+
+body {
+    margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 /* fonts */
@@ -32,11 +37,7 @@ p {
     font-size: 18px;
 }
 
-
 main {
-    /* background-image: url("../assets/background.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat; */
     padding: 40px;
     display: flex;
     justify-content: center;    
@@ -66,7 +67,7 @@ main {
 }
 
 .avatar {
-    width: 300px;
+    width: 350px;
     background-color: #f1c404;
 } 
 
@@ -101,7 +102,6 @@ main {
     max-width: 500px;
     text-align: center;
     margin-right:30px;
-
 }
 
 .homepage-intro-area h1 {
@@ -113,7 +113,6 @@ main {
 .homepage-intro-area h3 {
     color:white;
     font-size: 22px;
-
 }
 
 .homepage-intro-area p {
@@ -160,7 +159,6 @@ form p {
     width: 100%;
     margin-top: 7px;
     margin-bottom: 20px;
-
 }
 
 label > input {
@@ -193,6 +191,11 @@ label > input:checked + img {
     height: 80px;;
 }
 
+.anthem-image {
+    width: 140px;
+    height: 80px;;
+}
+
 /* survey page  */
 
 .question-page {
@@ -212,7 +215,6 @@ label > input:checked + img {
     padding: 20px;
     text-align: left;
     margin-bottom:200px;
-    
 }
 
 .question-area-speaker-img {
@@ -225,6 +227,7 @@ label > input:checked + img {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    padding: 25px;
 }
 .highlight {
     color: #2c3e50;
@@ -257,19 +260,12 @@ label > input:checked + img {
 
 /* Results*/
 
-
-
-.results {
-    
-}
-
 .results h2 {
     text-align: center;
 }
 
 .results-image {
     margin-bottom: -4px;
-
     width: 500px;
 }
 
@@ -277,12 +273,6 @@ label > input:checked + img {
     text-align: center;
 
 }
-
-.result-box {
-   
-
-}
-
 
 .reset {
     background: #e74c3c;
@@ -298,6 +288,10 @@ label > input:checked + img {
 
 .reset-button {
     margin: 0 auto;
+}
+
+.question-area .reset{
+    margin: 40px;
 }
 
 /* footer */
@@ -335,7 +329,6 @@ footer {
     }
     .question-area-intro h1 {
        margin-right: 40px;
-
     }
 }
 @media screen and (max-width: 600px) {

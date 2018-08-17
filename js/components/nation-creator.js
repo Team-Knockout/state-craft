@@ -11,7 +11,7 @@ let template = function() {
         <h3>See if you have want it takes to run a nation!</h3>
         <p>To begin your term as
         leader; create your nation, pick a flag and start the game </p>
-        <img class="welcome-image" src="../../assets/little-man-homepage.png">
+        <img class="welcome-image" src="assets/little-man-homepage.png">
     </section>
 
     <section class="creator-section">
@@ -26,23 +26,24 @@ let template = function() {
             <sup>*</sup>Pick a Flag:<br>
             <section class="homepage-flags">
                 <label>
-                    <input type="radio" name="nationFlag" value="assets/flag1.png" required/>
+                    <input class="nationFlag" type="radio" name="nationFlag" value="assets/flag1.png" required/>
                     <img class="flag-image" src="assets/flag1.png">
                 </label>
                 <label>
-                    <input type="radio" name="nationFlag" value="assets/flag2.png" required/>
+                    <input class="nationFlag" type="radio" name="nationFlag" value="assets/flag2.png" required/>
                     <img class="flag-image" src="assets/flag2.png">
                 </label>
                 <label>
-                    <input type="radio" name="nationFlag" value="assets/flag3.png" required/>
+                    <input class="nationFlag" type="radio" name="nationFlag" value="assets/flag3.png" required/>
                     <img class="flag-image" src="assets/flag3.png">
                 </label>
                 <label>
-                    <input type="radio" name="nationFlag" value="assets/flag4.png" required/>
+                    <input class="nationFlag" type="radio" name="nationFlag" value="assets/flag4.png" required/>
                     <img class="flag-image" src="assets/flag4.png">
                 </label>
             </section>
-            <input class="form-button" type="submit" value="StartGame" required>
+
+            <input class="form-button" type="submit" value="Start Game" required>
             <p><sup>*</sup>required</p>
         </form>
     </section>
@@ -66,7 +67,6 @@ export default class NationCreator {
             event.preventDefault();
 
             let inputs = event.target.querySelectorAll('input');
-            console.log(inputs);
 
             let tempData = [];
 
