@@ -89,22 +89,24 @@ main {
 .flex-container {
     display: flex;
     padding:20px;
-    max-width: 1200px;
+    width: 1200px;
     height: 100%;
     margin: 0;
 }
 
 .homepage-intro-area {
     color:white;
-    max-width: 500px;
     text-align: center;
-    margin-right:30px;
+    padding:20px;
+    max-width: 550px;
 
 }
 
 .homepage-intro-area h1 {
     color:white;
     font-size: 92px;
+    padding-left:20px;
+    padding-right:20px;
     margin: 0;
 }
 
@@ -125,7 +127,6 @@ main {
 
 .welcome-image {
     margin-bottom: -4px;
-    align-self: flex-end;
     width: 500px;
 }
 
@@ -133,8 +134,9 @@ main {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-    width: 900px;
+    max-width: 700px;
     padding-top:30px;
+    padding-right:20px;
 }
 
 form {
@@ -187,8 +189,8 @@ label > input:checked + img {
 }
 
 .flag-image {
-    width: 140px;
-    height: 80px;;
+    width: 110px;
+    height: 70px;;
 }
 
 /* survey page  */
@@ -348,10 +350,23 @@ footer {
     }
 }
 @media screen and (max-width: 480px) {
+
     .flex-container {
     display: flex;
     flex-direction:column;
     width: 100%;
+    }
+
+    .homepage-intro-area h1{
+        font-size: 60px;
+    }
+
+    .form-button {
+        max-width: 200px;
+    }
+
+    .welcome-image {
+        max-width: 300px;;
     }
 
     .question-area-intro{
@@ -359,6 +374,7 @@ footer {
         max-height: 280px;
         border-radius: 10px;
     }
+
     .question-area-intro h1 {
        margin-right: 40px;
 
@@ -374,6 +390,12 @@ footer {
      }
     .results-image {
         display:none;
+    }
+
+    .reset{
+     max-width: 200px;
+     margin-top:20px
+
     }
 }
 @media screen and (max-width: 600px) {
