@@ -303,6 +303,7 @@ label > input:checked + img {
     background: #34495e;
     min-height: 190px;
     margin-bottom: 60px;
+    border-radius: 8px;
 }
 
 .type-box p {

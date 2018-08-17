@@ -27,7 +27,9 @@ function createNation() {
         safety: 2.5, 
         environment: 2.5,
 
-        govType: '',
+        govType: 'Newborn Republic',
+        govOverview: 'Did you even play the game?',
+        govDetails: 'We built this great game, and you didn\'t even bother to answer a single question in it. Being a leader requires discipline and perseverance, neither of which you are showing right now.'
     };
 
     return data;
