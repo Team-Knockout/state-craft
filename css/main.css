@@ -5,10 +5,19 @@
     font-weight: 300;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     margin: 0;
 	padding: 0;
-	border: 0;
+    border: 0;
+    min-height: 100vh;
+}
+
+div#root {
+    min-height: 100vh;
 }
 
 /* fonts */
@@ -67,6 +76,11 @@ main {
     margin-left: 50px;
 }
 
+.menu-nav a {
+    margin-left: 50px;
+    font-size: 18px;
+}
+
 .avatar {
     width: 350px;
     background-color: #f1c404;
@@ -87,7 +101,7 @@ main {
 .home-page {
     padding-top: 80px;
     padding-bottom:100px;
-    background: #2c3e50
+    background: #2c3e50;
  }
  
 .flex-container {
@@ -200,13 +214,13 @@ label > input:checked + img {
 /* survey page  */
 
 .question-page {
-    background: #fcfafa;
+    background: white;
 }
 
 
 .question-area-intro{  
     min-width: 550px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
     background-color: #e74c3c;  
 }
 

@@ -7,7 +7,7 @@ let template = function() {
     return html`
         <div class="question-box">
 
-            <span class="highlight"> The question your faced with... </span>
+            <span class="highlight"> The issue you're faced with... </span>
         <div class="question-text"></div>
 
             <span class="highlight"> your choices </span>
