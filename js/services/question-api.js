@@ -13,9 +13,12 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom += 0.8;
                 nation.politicalFreedom += 0.3;
-                nation.approval += 0.4;
                 nation.health += 0.1;
                 nation.safety += 0.2;
+
+                if(nation.personalFreedom > 2) {
+                    nation.approval += 0.4;
+                }
             }
         },
         {
@@ -25,6 +28,10 @@ let questions = [
                 nation.personalFreedom -= 1.1;
                 nation.politicalFreedom -= 0.3;
                 nation.safety -= 0.1;
+
+                if(nation.PersonalFreedom < 2) {
+                    nation.approval -= 0.4;
+                }
             }
         },
         {
@@ -33,7 +40,10 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom += 2.0;
                 nation.politicalFreedom -= 2.1;
-                nation.approval -= 0.6;
+
+                if(nation.politicalFreedom < 2) {
+                    nation.approval -= 0.3;
+                }
             }
         }] 
     },
@@ -47,7 +57,14 @@ let questions = [
                 nation.population += 2.0;
                 nation.econProduction += 0.4;
                 nation.health -= 0.3;
-                nation.approval -= 0.2;
+                
+                if(nation.personalFreedom < 2) {
+                    nation.approval -= 0.2;
+                }
+
+                if(nation.econProduction > 2.5) {
+                    nation.approval += 0.3;
+                }
             }
         },
         {
@@ -58,6 +75,14 @@ let questions = [
                 nation.econProduction -= 0.1;
                 nation.health -= 0.1;
                 nation.safety += 0.1;
+
+                if(nation.personalFreedom < 2) {
+                    nation.approval -= 0.2;
+                }
+
+                if(nation.safety > 2) {
+                    nation.approval += 0.1;
+                }
             }
         },
         {
@@ -68,6 +93,10 @@ let questions = [
                 nation.econProduction += 0.1;
                 nation.health += 0.1;
                 nation.safety += 0.1;
+
+                if(nation.population < 2.5) {
+                    nation.approval -= 0.2;
+                }
             }
         }] 
     },
@@ -84,6 +113,14 @@ let questions = [
                 nation.health += 0.7;
                 nation.safety += 0.7;
                 nation.environment += 2.0;
+
+                if(nation.environment > 3) {
+                    nation.approval += 0.4;
+                }
+
+                if(nation.econProduction < 2.5) {
+                    nation.approval -= 0.2;
+                }
             }
         },
         {
@@ -103,7 +140,10 @@ let questions = [
                 nation.health -= 0.5;
                 nation.safety -= 0.3;
                 nation.environment -= 1.1;
-                nation.approval -= 0.1;
+
+                if(nation.environment < 2.5) {
+                    nation.approval -= 0.3;
+                }
             }
         }]
     },
@@ -119,6 +159,10 @@ let questions = [
                 nation.econProduction += 0.1;
                 nation.safety += 0.1;
                 nation.environment -= 0.4;
+
+                if(nation.personalFreedom < 3) {
+                    nation.approval -= 0.1;
+                }
             }
         },
         {
@@ -127,6 +171,10 @@ let questions = [
                 nation.personalFreedom += 1.3;
                 nation.population -= 0.05;
                 nation.environment += 0.3;
+
+                if(nation.personalFreedom > 3) {
+                    nation.approval += 0.2;
+                }
             }
         }]
     },
@@ -143,6 +191,14 @@ let questions = [
                 nation.health += 0.3;
                 nation.safety += 0.3;
                 nation.environment += 2.5;
+
+                if(nation.personalFreedom < 2.5) {
+                    nation.approval -= 0.1;
+                }
+
+                if(nation.environment > 4) {
+                    nation.approval += 0.5;
+                }
             }
         },
         {
@@ -155,7 +211,10 @@ let questions = [
                 nation.health -= 0.2;
                 nation.safety -= 0.2;
                 nation.environment -= 1.1;
-                nation.approval += 0.3;
+
+                if(nation.environment > 3) {
+                    nation.approval -= 0.2;
+                }
             }
         }]
     },
@@ -171,6 +230,13 @@ let questions = [
                 nation.econProduction -= 0.2;
                 nation.health += 0.3;
                 nation.safety += 0.5;
+
+                if(nation.personalFreedom < 2.5) {
+                    nation.approval -= 0.1;
+                }
+                if(nation.safety > 3) {
+                    nation.approval += 0.2;
+                }
             }
         },
         {
@@ -183,6 +249,14 @@ let questions = [
                 nation.health -= 0.1;
                 nation.safety -= 0.8;
                 nation.environment -= 0.3;
+
+                if(nation.personalFreedom && nation.econProduction > 2.5) {
+                    nation.approval += 0.2;
+                }
+
+                if(nation.safety < 2.5) {
+                    nation.approval -= 0.3;
+                }
             }
         }]
     },
@@ -198,6 +272,14 @@ let questions = [
                 nation.health -= 0.1;
                 nation.safety += 0.3;
                 nation.environment -= 0.8;
+
+                if(nation.population > 2.5) {
+                    nation.approval += 0.1;
+                }
+
+                if(nation.environment < 3) {
+                    nation.approval -= 0.2;
+                }
             }
         },
         {
@@ -210,6 +292,18 @@ let questions = [
                 nation.health += 0.3;
                 nation.safety -= 0.3;
                 nation.environment += 0.7;
+
+                if(nation.environment > 3) {
+                    nation.approval += 0.1;
+                }
+
+                if(nation.health && nation.econProduction > 2.5) {
+                    nation.approval += 0.2;
+                }
+
+                if(nation.economicFreedom < 3) {
+                    nation.approval -= 0.1;
+                }
             }
         },
         {
@@ -256,6 +350,10 @@ let questions = [
                 nation.econProduction -= 0.7;
                 nation.health -= 0.1;
                 nation.environment += 0.5;
+
+                if(nation.personalFreedom && nation.economicFreedom < 3) {
+                    nation.approval -= 0.1;
+                }
             }
         },
         {
@@ -281,6 +379,10 @@ let questions = [
                 nation.econProduction -= 0.4;
                 nation.health += 0.8;
                 nation.environment += 0.5;
+
+                if(nation.personalFreedom && nation.health > 3) {
+                    nation.approval += 0.2;
+                }
             }
         },
         {
@@ -292,6 +394,13 @@ let questions = [
                 nation.econProduction -= 0.6;
                 nation.health += 1.1;
                 nation.environment += 0.5;
+
+                if(nation.personalFreedom < 3) {
+                    nation.approval -= 0.1;
+                }
+                if(nation.health > 3) {
+                    nation.approval += 0.2;
+                }
             }
         },
         {
