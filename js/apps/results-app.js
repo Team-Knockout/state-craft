@@ -14,22 +14,23 @@ let template = function() {
     return html`
     <header></header>
     <section class="results-title">
-        <h1>So how did you do?</h1>
-        <h3> the results are in.</h3>
-    </section>
-
+        <h1>The results are in.</h1>
+      </section>
         <main>
             <div class="flex-container">
+            
                 <section class="results-intro-area">
                     <img class="results-image" src="assets/little-man-results.jpg">
                 </section>
-                <section class="results"> </section>    
+                <section class="results">
+                    <section class="type-info"></section>
+                    <section class="results-section"> </section>
+                    <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
+                      
+                </section>    
             </div>
-            <section class="type-info"></section>
+            
         </main>
-        <section class="reset-button">
-            <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
-        </section>
             
     <footer></footer>
         
@@ -54,7 +55,7 @@ export default class App{
         head.appendChild(header.render());
         foot.appendChild(footer.render());
 
-        let resultSection = dom.querySelector('.results');
+        let resultSection = dom.querySelector('.results-section');
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
