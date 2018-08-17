@@ -229,6 +229,7 @@ label > input:checked + img {
     margin-top: 20px;
     padding: 10px;
     width:320px;
+    cursor: pointer;
 }
 
 .flag-image {
@@ -373,6 +374,7 @@ label > input:checked + img {
     padding: 10px;
     width:320px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .reset-button {
