@@ -11,7 +11,7 @@ let template = function(nation) {
             </div>
             <div class="motto"> 
                 <h1>${nation.nationMotto}</h1>
-                <p>(really?)</p>
+                <p class="fadeIn">(really?)</p>
             </div>
             <div class="avatar">
                 <ul class="avatar-list">
