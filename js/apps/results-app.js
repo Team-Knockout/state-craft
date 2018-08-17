@@ -20,7 +20,6 @@ let template = function() {
     </section>
     <main>
       <div class="flex-container">
-            
                 <section class="results-intro-area">
                     <img class="results-image" src="assets/little-man-results.jpg">
                 </section>
@@ -28,11 +27,9 @@ let template = function() {
                     <section class="type-info"></section>
                     <section class="results-section"> </section>
                     <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
-                      
                 </section>    
-            </div>
-            
-        </main>
+        </div>        
+    </main>
             
     <footer></footer>
         
