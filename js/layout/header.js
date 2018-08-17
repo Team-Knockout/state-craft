@@ -6,7 +6,6 @@ let template = function(nation) {
     <nav>
         <div class="menu-content">
              <div class="menu-nav">
-                <a href="index.html">Home</a>
                 <a href="survey.html">Play Game</a>
                 <a href="results.html">Results</a>
              </div>
@@ -27,10 +26,7 @@ let template = function(nation) {
 
 export default class Header {       
     constructor(props) {
-        console.log(props);
         this.nation = props.nation;
-        console.log(' this.nation : ', this.nation);
-
     }
 
 

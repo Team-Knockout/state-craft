@@ -1,6 +1,5 @@
 
-// economicfreedom, personalfreedom, politicalfreedom
-//we are interpolating nation variables into a string, treating it as 3d coordinates and searching for that unique key in the philosophy object
+
 let govType = {
     '0,0,0': {
         name: 'Psychotic Dictatorship',

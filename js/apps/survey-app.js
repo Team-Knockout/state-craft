@@ -63,7 +63,6 @@ export default class App {
                 renderQuestionBox(nation, location);
                 while(head.lastElementChild) {
                     head.lastElementChild.remove();
-                    console.log(this.nation);
                 }
                 head.appendChild(header.render());
             },
@@ -72,8 +71,9 @@ export default class App {
 
         function warning() {
             return html`
-                <p>You've already answered all of the questions!</p>
-                <p>Dev note: run resetNation() in the console to be able to play again</p>
+                <p>You've already answered all of the questions!</p> <br>
+                <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">    
+
             `;
         }
 
@@ -87,6 +87,10 @@ export default class App {
                 }
                 questionAreaIntro.setAttribute('style', 'display:none;');
                 location.appendChild(warning());
+                let resetNation = dom.querySelector('.reset');
+                resetNation.addEventListener('click', () => {
+                    window.resetNation();
+                });
             }
         }
         renderQuestionBox(this.nation, questionArea);

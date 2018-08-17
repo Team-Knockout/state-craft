@@ -1,8 +1,4 @@
 
-// source: https://nsindex.net/wiki/NationStates_Issue_No._1
-
-
-
 let questions = [
     {
         title: 'Should Democracy Be Compulsory?',
@@ -12,7 +8,9 @@ let questions = [
             response: 'Voting is voluntary.',
             effects: (nation) => {
                 nation.personalFreedom += 0.8;
-                nation.politicalFreedom += 0.3;
+                nation.politicalFreedom += 1.1;
+                nation.approval += 0.4;
+
                 nation.health += 0.1;
                 nation.safety += 0.2;
 
@@ -26,7 +24,7 @@ let questions = [
             response: 'Voting is compulsory.',
             effects: (nation) => {
                 nation.personalFreedom -= 1.1;
-                nation.politicalFreedom -= 0.3;
+                nation.politicalFreedom -= 1.1;
                 nation.safety -= 0.1;
 
                 if(nation.PersonalFreedom < 2) {
@@ -55,7 +53,7 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom -= 0.8;
                 nation.population += 2.0;
-                nation.econProduction += 0.4;
+                nation.econProduction += 0.8;
                 nation.health -= 0.3;
                 
                 if(nation.personalFreedom < 2) {
@@ -90,7 +88,7 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom += 0.8;
                 nation.population -= 0.8;
-                nation.econProduction += 0.1;
+                nation.econProduction += 0.5;
                 nation.health += 0.1;
                 nation.safety += 0.1;
 
@@ -109,10 +107,11 @@ let questions = [
                 nation.personalFreedom -= 0.8;
                 nation.economicFreedom += 0.1;
                 nation.population -= 0.3;
-                nation.econProduction -= 0.7;
+                nation.econProduction -= 0.5;
                 nation.health += 0.7;
                 nation.safety += 0.7;
-                nation.environment += 2.0;
+                nation.environment += 1.0;
+
 
                 if(nation.environment > 3) {
                     nation.approval += 0.4;
@@ -126,17 +125,17 @@ let questions = [
         {
             answer: '"The only thing people are sick of is long-haired idiots riding their bicycles at two miles an hour on major thoroughfares," says committed motorist Savannah Lennon. "People shouldn\'t be able to protest like this.The government needs to crack down on them."',
             effects: (nation) => {
-                nation.economicFreedom -= 0.4;
-                nation.politicalFreedom -= 0.1;
-                nation.econProduction += 0.2;
-                nation.environment -= 0.1;
+                nation.economicFreedom -= 1.0;
+                nation.politicalFreedom -= 0.3;
+                nation.econProduction += 0.5;
+                nation.environment -= 0.6;
             }
         },
         {
             answer: 'The Automotive Manufacturers Association, meanwhile, has called for government support. "It\'s clear that we need to boost the level of automobile support in this country.This protest this morning is a clear indication of...um...anyway, we need more government funds."',
             effects: (nation) => {
-                nation.economicFreedom -= 0.4;
-                nation.econProduction += 0.8;
+                nation.economicFreedom -= 0.7;
+                nation.econProduction += 1.0;
                 nation.health -= 0.5;
                 nation.safety -= 0.3;
                 nation.environment -= 1.1;
@@ -190,7 +189,8 @@ let questions = [
                 nation.econProduction -= 2.5;
                 nation.health += 0.3;
                 nation.safety += 0.3;
-                nation.environment += 2.5;
+                nation.environment -= 0.5;
+
 
                 if(nation.personalFreedom < 2.5) {
                     nation.approval -= 0.1;
@@ -291,6 +291,7 @@ let questions = [
                 nation.econProduction += 0.7;
                 nation.health += 0.3;
                 nation.safety -= 0.3;
+
                 nation.environment += 0.7;
 
                 if(nation.environment > 3) {
@@ -326,7 +327,7 @@ let questions = [
             answer: '"These nuts have got to be stopped," demands concerned consumer Alina Betts. "They need to face the fact people want snack packs, no matter how many innocent chickens must be sacrificed. Besides, chickens would do the same to us if they had the chance."',
             effects: (nation) => {
                 nation.personalFreedom -= 0.4;
-                nation.economicFreedom += 0.2;
+                nation.economicFreedom += 0.5;
                 nation.politicalFreedom -= 0.2;
                 nation.econProduction += 0.2;
                 nation.environment -= 0.1;
@@ -337,6 +338,7 @@ let questions = [
             effects: (nation) => {
                 nation.personalFreedom -= 0.3;
                 nation.economicFreedom -= 0.2;
+                nation.politicalFreedom += 0.7;
                 nation.econProduction -= 0.1;
                 nation.health += 0.1;
                 nation.environment += 0.1;
@@ -349,6 +351,7 @@ let questions = [
                 nation.economicFreedom -= 0.9;
                 nation.econProduction -= 0.7;
                 nation.health -= 0.1;
+
                 nation.environment += 0.5;
 
                 if(nation.personalFreedom && nation.economicFreedom < 3) {
@@ -374,10 +377,11 @@ let questions = [
             answer: '"For too long, our bodies have been trapped in these prisons of cotton and polyester!" yelled protester Erin Bentley, while apparently developing a nasty case of sunburn. "We must repeal the puritanical laws that make public nudity a crime. My body—my choice to dangle!"',
             effects: (nation) => {
                 nation.personalFreedom += 1.2;
-                nation.economicFreedom += 0.1;
+                nation.economicFreedom += 0.3;
                 nation.population -= 0.3;
                 nation.econProduction -= 0.4;
                 nation.health += 0.8;
+
                 nation.environment += 0.5;
 
                 if(nation.personalFreedom && nation.health > 3) {
@@ -389,7 +393,7 @@ let questions = [
             answer: '"I agree," mused sociology professor Blythe Ackerman. "But I don\'t think the protestors are going far enough.Public nudity shouldn\'t be an option: it should be compulsory. Nudity is highly liberating. And it would put that disgusting "Hooters" out of business once and for all."',
             effects: (nation) => {
                 nation.personalFreedom -= 0.7;
-                nation.economicFreedom += 0.2;
+                nation.economicFreedom += 0.4;
                 nation.population -= 0.5;
                 nation.econProduction -= 0.6;
                 nation.health += 1.1;
@@ -425,7 +429,7 @@ let questions = [
                 nation.econProduction += 0.1;
                 nation.health += 0.1;
                 nation.safety += 0.1;
-                nation.environment += 0.3;
+                nation.environment += 0.2;
             }
         },
         {
@@ -448,7 +452,7 @@ let questions = [
                 nation.econProduction -= 0.3;
                 nation.health += 0.1;
                 nation.safety += 0.1;
-                nation.environment += 0.4;
+                nation.environment += 0.3;
             }
         }]
     },

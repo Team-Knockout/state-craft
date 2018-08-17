@@ -14,10 +14,12 @@ let template = function() {
     return html`
     <header></header>
     <section class="results-title">
-        <h1>The results are in.</h1>
-      </section>
-        <main>
-            <div class="flex-container">
+        <h1>So How Did You Do?</h1>
+        <h3> The results are in.</h3>
+        <audio autoplay loop>  <source src="assets/anthem.mp3"></audio>    
+    </section>
+    <main>
+      <div class="flex-container">
             
                 <section class="results-intro-area">
                     <img class="results-image" src="assets/little-man-results.jpg">
@@ -59,7 +61,6 @@ export default class App{
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
-            console.log('reset ran');
         });
         
         function getResultsKeys(arrayOut) {
