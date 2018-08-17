@@ -81,6 +81,11 @@ main {
     font-size: 18px;
 }
 
+.motto {
+    color: white;
+    text-align: center;
+}
+
 .avatar {
     width: 350px;
     background-color: #f1c404;
