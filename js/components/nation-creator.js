@@ -11,7 +11,7 @@ let template = function() {
         <h3>See if you have want it takes to run a nation!</h3>
         <p>To begin your term as
         leader; create your nation, pick a flag and start the game </p>
-        <img class="welcome-image" src="../../assets/little-man-homepage.png">
+        <img class="welcome-image" src="assets/little-man-homepage.png">
     </section>
 
     <section class="creator-section">
