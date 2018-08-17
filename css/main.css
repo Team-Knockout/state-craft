@@ -53,7 +53,29 @@ main {
     justify-content: center;    
 }
 
+.fadeIn{
+    opacity: 0;
+    animation: fadeIn 1.8s forwards;
+}
+      
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+    transform: translateY(50px);
+}
+30% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+
 /* navigation and header */
+
 .menu-content {
     display: none; 
     flex-direction: column;
@@ -84,6 +106,7 @@ main {
 .motto {
     color: white;
     text-align: center;
+    line-height: 0%;
 }
 
 .avatar {
@@ -224,18 +247,17 @@ label > input:checked + img {
     background: white;
 }
 
-
 .question-area-intro{  
     min-width: 550px;
     border-radius: 10px 10px 10px 10px;
     background-color: #e74c3c;  
+    text-align: center;
 }
 
 .question-area-intro h1 {
     color:white;
-    font-size: 40px;
+    font-size: 45px;
     padding: 20px;
-    text-align: left;
     margin-bottom:200px;
 }
 
@@ -300,9 +322,14 @@ label > input:checked + img {
 }
 
 .results-title {
+    padding-top: 30px;
     text-align: center;
-
+    line-height: 20px;
+ 
 }
+
+
+
 
 .type-box {
     padding: 20px;
