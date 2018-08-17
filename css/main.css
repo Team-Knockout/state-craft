@@ -38,8 +38,7 @@ p {
 }
 
 main {
-    background: #fcfafa;
-
+    background: white;
     padding: 40px;
     display: flex;
     justify-content: center;    
