@@ -14,8 +14,9 @@ let template = function() {
     return html`
     <header></header>
     <section class="results-title">
-        <h1>So how did you do?</h1>
-        <h3> the results are in.</h3>
+        <h1>So How Did You Do?</h1>
+        <h3> The results are in.</h3>
+        <audio autoplay loop>  <source src="assets/anthem.mp3"></audio>    
     </section>
 
         <main>
@@ -58,7 +59,6 @@ export default class App{
         
         resetNation.addEventListener('click', () => {
             window.resetNation();
-            console.log('reset ran');
         });
         
         function getResultsKeys(arrayOut) {

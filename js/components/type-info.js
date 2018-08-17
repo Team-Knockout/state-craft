@@ -4,9 +4,9 @@ let template = function(nation) {
     return html`
     <div class="type-box">
         <img src="assets/gov-types.svg">
-        <p>Your nation is a ${nation.govType}.</p>
-        <p>Overview: ${nation.govOverview}</p>
-        <p>Details: ${nation.govDetails}</p>
+        <p>Your nation's government has been labelled: ${nation.govType}.</p>
+        <p>${nation.govOverview}</p>
+        <p>${nation.govDetails}</p>
     </div>
    `;
 };
