@@ -10,7 +10,7 @@ let template = function(text) {
 
 export default class Result{
     constructor(props) {
-        this.text = props.text;
+        this.result = props.result;
     }
 
     render() {
