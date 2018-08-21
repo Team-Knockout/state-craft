@@ -1,8 +1,9 @@
 
 
-// text array should have 5 elements
+//text array should have 5 elements
 
 let results = [
+
     { 
         label: 'Personal Freedom',
         key: 'personalFreedom',
@@ -104,5 +105,5 @@ let results = [
 
 
 export default {
-    get: () => results
+    get: () => results,
 };
