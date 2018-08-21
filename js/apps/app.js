@@ -5,10 +5,8 @@ import nationApi from '../services/nation-api.js';
 
 let template = function() {
     return html`
-    <main class="home-page">
-        
-    </main>
-    <footer></footer>
+        <main class="home-page"></main>
+        <footer></footer>
    `;
 };
 
@@ -27,7 +25,11 @@ export default class App {
         foot.appendChild(footer.render());
                 
         let main = dom.querySelector('main');
-        let nationCreator = new NationCreator();
+        let nationCreator = new NationCreator({
+            onCreated: () => {
+                window.location.href = 'survey.html';
+            }
+        });
         main.appendChild(nationCreator.render());
 
         return dom;

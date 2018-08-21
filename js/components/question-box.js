@@ -8,10 +8,10 @@ let template = function() {
         <div class="question-box">
 
             <span class="highlight"> The issue you're faced with... </span>
-        <div class="question-text"></div>
+            <div class="question-text"></div>
 
             <span class="highlight"> your choices </span>
-        <div class="answer-list"></div>
+            <div class="answer-list"></div>
             
         </div>
    `;
@@ -19,13 +19,8 @@ let template = function() {
 
 export default class QuestionBox{
     constructor(props) {
-        this.questions = props.questions;
-        this.nation = props.nation;
         this.question = props.question;
-        this.reRenderQuestionBox = props.reRenderQuestionBox;
-        this.questionArea = props.questionArea;
-        this.setType = props.setType;
-        this.getTypes = props.getTypes;
+        this.onAnswer = props.onAnswer;
     }
 
     render() {
@@ -37,29 +32,19 @@ export default class QuestionBox{
         let newQuestion = new Question({
             question: this.questions[this.nation.question],
         });
+
         questionText.appendChild(newQuestion.render());
 
-        
-        for(let i = 0; i < this.questions[this.nation.question].options.length; i++) {
-            
-            let answer = new Answer({
-    
-                question: this.questions[this.nation.question],
-                index: i,
-                handleAnswer: (selectedIndex) => {
+        let options = this.questions[this.nation.question].options;
 
-                    this.questions[this.nation.question]['options'][selectedIndex].effects(this.nation);
-                    this.setType(this.nation);                    
-                    this.nation.question++;
-                    
-                    if(this.nation.question >= 10) {
-                        window.location.replace('results.html');
-                    }
-                    else {
-                        this.reRenderQuestionBox(this.nation, this.questionArea);
-                    }
-                },
+        for(let i = 0; i < options.length; i++) {
+            let option = options[i];
+
+            let answer = new Answer({
+                option: option,
+                handleAnswer: this.onAnswer,
             });
+
             answerList.appendChild(answer.render());
         }
         
