@@ -14,7 +14,9 @@ export default class Question {
     }
 
     render() {
+
         let dom = template(this.question);
+
         return dom;
     }
 }

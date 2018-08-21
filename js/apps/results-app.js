@@ -7,19 +7,20 @@ import TypeInfo from '../components/type-info.js';
 import resultsApi from '../services/results-api.js';
 import nationApi from '../services/nation-api.js';
 
+
+
+
 let template = function() {
     return html`
-        <header></header>
+    <header></header>
+    <section class="results-title">
+        <h1>So How Did You Do?</h1>
+        <h3> The results are in.</h3>
 
-        <section class="results-title">
-            <h1>So How Did You Do?</h1>
-            <h3> The results are in.</h3>
-
-            <audio autoplay loop>  <source src="assets/anthem.mp3"></audio>    
-        </section>
-
-        <main>
-            <div class="flex-container">
+        <audio autoplay loop>  <source src="assets/anthem.mp3"></audio>    
+    </section>
+    <main>
+      <div class="flex-container">
                 <section class="results-intro-area">
                     <img class="results-image" src="assets/little-man-results.jpg">
                 </section>
@@ -28,15 +29,17 @@ let template = function() {
                     <section class="results-section"> </section>
                     <input class="reset" type="submit" onclick="location.href='index.html';" name="reset" value="Play Again">
                 </section>    
-            </div>        
-        </main>
-                
-        <footer></footer>
+        </div>        
+    </main>
+            
+    <footer></footer>
+        
    `;
 };
 
 export default class App{
     constructor() {
+        this.text = resultsApi.get()[0]['text'][0];
         this.nation = nationApi.get();
     }
 
@@ -57,35 +60,58 @@ export default class App{
         resetNation.addEventListener('click', () => {
             window.resetNation();
         });
-
+        
+        function getResultsKeys(arrayOut) {
+            for(let i = 0; i < resultsApi.get().length; i++) {
+                let x = resultsApi.get()[i]['key'];
+                arrayOut.push(x);
+            }
+        }
+        function getValueArray(arrayIn, arrayOut) {
+            for(let i = 0; i < arrayIn.length; i++){
+                arrayOut.push(nationApi.getProp(arrayIn[i]));
+            }
+        }
+        function valuesToIndexes(arrayIn, arrayOut) {
+            for(let i = 0; i < arrayIn.length; i++) {
+                let roundedNum = Math.floor(arrayIn[i]);
+                if(roundedNum > 4){
+                    arrayOut.push(4);
+                }
+                else if(roundedNum < 0){
+                    arrayOut.push(0);
+                }
+                else {
+                    arrayOut.push(roundedNum);
+                }
+            }
+        }
+        function renderResults(arrayIn){
+            for(let i = 0; i < resultsApi.get().length; i++){
+                let textArray = resultsApi.get()[i]['text'];
+                let correctIndex = arrayIn[i];
+                let result = new Result ({
+                    text: textArray[correctIndex],
+                });
+                resultSection.appendChild(result.render());
+            }
+        }
+ 
         let typeArea = dom.querySelector('.type-info');
         let typeInfo = new TypeInfo({
             nation: this.nation
         });
         typeArea.appendChild(typeInfo.render());
 
-        // don't call the api over and over
-        let results = resultsApi.get();
 
-        for(let i = 0; i < results.length; i++) {
-            let result = results[i];
-            let score = this.nation[result.key];
-            let index = getRoundedValue(score);
+        let keyArray = [];
+        let valueArray = [];
+        let indexArray = [];
+        getResultsKeys(keyArray);
+        getValueArray(keyArray, valueArray);
+        valuesToIndexes(valueArray, indexArray);
+        renderResults(indexArray);
 
-            let resultComponent = new Result ({
-                text: result.text[index]
-            });
-
-            resultSection.appendChild(resultComponent.render());
-        }
-
-        function getRoundedValue(score) {
-            score = Math.floor(score);
-            score = Math.min(score, 4);
-            score = Math.max(score, 0);
-            return score;
-        }
- 
         return dom;
     }
 }

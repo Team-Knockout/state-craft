@@ -1,24 +1,26 @@
 
 import html from '../libs/html.js';
 
-let template = function(option) {
+let template = function(question, index) {
     return html`
-        <p class="answer"> ${option.answer}</p>
+        <p class="answer"> ${question['options'][index].answer}</p>
    `;
 };
 
 export default class Answer {
     constructor(props) {
-        this.option = props.option;
-        this.onAnswer = props.onAnswer;
+        this.question = props.question;
+        this.index = props.index;
+        this.handleAnswer = props.handleAnswer;
     }
 
     render() {
 
-        let dom = template(this.option);
+        let dom = template(this.question, this.index);
+
         let answer = dom.querySelector('.answer');
         answer.addEventListener('click', () => {
-            this.onAnswer(this.option);
+            this.handleAnswer(this.index);
         });
 
         return dom;

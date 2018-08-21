@@ -1,7 +1,4 @@
 import data from './game-storage.js';
-import typeApi from './type-api';
-
-let types = typeApi.get();
 
 let nation = data.nation;
 
@@ -32,31 +29,7 @@ function createNation() {
 
         govType: 'Newborn Republic',
         govOverview: 'Did you even play the game?',
-        govDetails: 'We built this great game, and you didn\'t even bother to answer a single question in it. Being a leader requires discipline and perseverance, neither of which you are showing right now.',
-
-        // This feels better to me to let nation update itself
-        setType() {
-            let vals = [this.economicFreedom, this.personalFreedom, this.politicalFreedom];
-            let keys = [];
-            
-            for(let i = 0; i < vals.length; i++){
-                if(vals[i] < 1.67){
-                    keys.push(0);
-                }
-                else if(vals[i] > 3.34) {
-                    keys.push(2);
-                }
-                else {
-                    keys.push(1);
-                }
-            }
-    
-            let typeKey = keys.join();
-
-            this.govType = types[typeKey].name;
-            this.govOverview = types[typeKey].overview;
-            this.govDetails = types[typeKey].details;
-        }
+        govDetails: 'We built this great game, and you didn\'t even bother to answer a single question in it. Being a leader requires discipline and perseverance, neither of which you are showing right now.'
     };
 
     return data;

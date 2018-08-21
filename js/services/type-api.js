@@ -141,8 +141,6 @@ let govType = {
 
 export default {
     get: () => govType,
-    // This would have been better in nation-api. You are not using
-    // anthing from types
     set: (nation) => {
         let vals = [nation.economicFreedom, nation.personalFreedom, nation.politicalFreedom];
         let keys = [];
@@ -159,7 +157,7 @@ export default {
             }
         }
 
-        let typeKey = keys.join();
+        let typeKey = `${keys[0]},${keys[1]},${keys[2]}`;
         
         nation.govType = govType[typeKey].name;
         nation.govOverview = govType[typeKey].overview;
